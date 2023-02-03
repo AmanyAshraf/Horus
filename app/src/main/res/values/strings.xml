@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Horus</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip"><u>Skip</u></string>
+    <string name="sign_in_to_start">Sign in to start \nplanning your trip.</string>
+    <string name="terms_of">By proceeding, you agree to our <u><b>Team of Use</b></u> and confirm you have read our <u><b>Privacy and Cookie Statement</b></u>.</string>
 </resources>
