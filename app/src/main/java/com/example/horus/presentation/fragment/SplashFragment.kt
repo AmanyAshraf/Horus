@@ -1,14 +1,12 @@
-package com.example.horus
+package com.example.horus.presentation.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import com.example.horus.R
 import com.example.horus.databinding.FragmentSplashBinding
 
 
