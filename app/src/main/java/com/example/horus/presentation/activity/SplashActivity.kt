@@ -1,12 +1,11 @@
-package com.example.horus
+package com.example.horus.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
+import com.example.horus.R
 import com.example.horus.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
