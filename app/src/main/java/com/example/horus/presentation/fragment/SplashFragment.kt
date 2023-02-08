@@ -21,13 +21,13 @@ class SplashFragment : Fragment() {
         binding=FragmentSplashBinding.inflate(inflater,container,false)
 
         binding.skipSplash.setOnClickListener(View.OnClickListener { view?.findNavController()
-            ?.navigate(R.id.action_splashFragment_to_mainActivity) })
+            ?.navigate(R.id.action_splashFragment_to_loginActivity) })
         binding.btnGoogle.setOnClickListener(View.OnClickListener { view?.findNavController()
-            ?.navigate(R.id.action_splashFragment_to_mainActivity) })
+            ?.navigate(R.id.action_splashFragment_to_loginActivity) })
         binding.btnFacebook.setOnClickListener(View.OnClickListener { view?.findNavController()
-            ?.navigate(R.id.action_splashFragment_to_mainActivity) })
+            ?.navigate(R.id.action_splashFragment_to_loginActivity) })
         binding.btnMail.setOnClickListener(View.OnClickListener { view?.findNavController()
-            ?.navigate(R.id.action_splashFragment_to_mainActivity) })
+            ?.navigate(R.id.action_splashFragment_to_loginActivity) })
 
 
 
