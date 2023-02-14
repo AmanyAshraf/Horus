@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Horus"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.activity.PersonInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activity.LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activity.SignUpActivity"
+            android:exported="false" />
         <activity
             android:name=".presentation.activity.LoginActivity"
             android:exported="false">
@@ -39,6 +53,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
