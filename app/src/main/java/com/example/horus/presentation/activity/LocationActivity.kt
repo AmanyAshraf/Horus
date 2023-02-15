@@ -14,36 +14,37 @@ import com.example.horus.databinding.ActivityLocationBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
+var ok = true
+var already_taken_location =false
 class LocationActivity : AppCompatActivity() {
-    var ok = true
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        val binding = DataBindingUtil.setContentView<ActivityLocationBinding>(
-            this,R.layout.activity_location
-        )
+        val binding = DataBindingUtil.setContentView<ActivityLocationBinding>(this,R.layout.activity_location)
         super.onCreate(savedInstanceState)
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         binding.btnAllowLocation.setOnClickListener(View.OnClickListener {
             if (ok) {
                 fetchLocation()
                 ok = false
+                already_taken_location =false
             } else {
                 val intent = Intent(this, PersonInformationActivity::class.java)
                 startActivity(intent)
+                finish()
                 ok = true
+                already_taken_location =true
             }
         })
-
-
         findViewById<TextView>(R.id.tv_not_now).setOnClickListener {
             val intent = Intent(this, PersonInformationActivity::class.java)
             startActivity(intent)
-        } }
+            finish()
+        }
+    }
     private fun fetchLocation(){
         val task = fusedLocationProviderClient.lastLocation
-
         if(ActivityCompat.checkSelfPermission(this,android.Manifest.permission.ACCESS_FINE_LOCATION)
         != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
                 this,android.Manifest.permission.ACCESS_COARSE_LOCATION)
