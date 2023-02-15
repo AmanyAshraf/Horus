@@ -13,7 +13,7 @@ import com.example.horus.R
 import com.example.horus.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
-    var ok = true
+    var p = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivitySignUpBinding>(
@@ -32,12 +32,16 @@ class SignUpActivity : AppCompatActivity() {
             } else if (binding.etEmailAddress.text.toString()
                     .isEmpty()
             ) binding.etEmailAddress.error = "Require!"
-            else if (binding.etPassword.text.toString().isEmpty()) binding.etPassword.error =
-                "Require!"
+            else if (binding.etPassword.text.toString().isEmpty()) binding.etPassword.error = "Require!"
             else {
-
-                val intent = Intent(this, LocationActivity::class.java)
-                startActivity(intent)
+                if (already_taken_location) {
+                    val intent = Intent(this, PersonInformationActivity::class.java)
+                    startActivity(intent)
+                }
+                else {
+                    val intent = Intent(this, LocationActivity::class.java)
+                    startActivity(intent)
+                }
             }
 
         })
@@ -47,15 +51,15 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(intent)
         })
         binding.ivPasswordImageShow.setOnClickListener(View.OnClickListener {
-            if (ok) {
+            if (p) {
                 binding.etPassword.transformationMethod =
                     HideReturnsTransformationMethod.getInstance()
                 binding.ivPasswordImageShow.setImageResource(R.drawable.logo_black)
-                ok = false
+                p = false
             } else {
                 binding.etPassword.transformationMethod = PasswordTransformationMethod.getInstance()
                 binding.ivPasswordImageShow.setImageResource(R.drawable.logo_gray)
-                ok = true
+                p = true
             }
         })
         fun onOptionsItemSelected(item: MenuItem): Boolean {
