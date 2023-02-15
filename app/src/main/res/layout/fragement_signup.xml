@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+
+    </data>
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_back_arrow"
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="33dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="61dp"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/tv_create_your_account"
+            android:layout_width="366dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/iv_back_arrow"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="53dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="24dp"
+            android:text="@string/create_your"
+            android:textSize="20sp"
+            android:shadowColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:lineHeight="30sp"
+            />
+
+        <EditText
+            android:id="@+id/et_email_address"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/tv_create_your_account"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/email_address"
+            android:paddingStart="48dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:lineHeight="21sp"
+            android:background="@drawable/sign_up_edit_text_shape"/>
+
+        <ImageView
+            android:id="@+id/iv_email_address_image_person"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignStart="@+id/et_email_address"
+            android:layout_alignTop="@+id/et_email_address"
+            android:layout_alignBottom="@+id/et_email_address"
+            android:layout_marginStart="21dp"
+
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/baseline_person_outline_24" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/et_email_address"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/sign_up_edit_text_shape"
+            android:fontFamily="@font/poppins_medium"
+            android:lineHeight="21sp"
+            android:paddingStart="48dp"
+            android:text="@string/password"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_password_image_open_lock"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_alignStart="@+id/et_password"
+            android:layout_alignTop="@+id/et_password"
+
+            android:layout_alignBottom="@+id/et_password"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/baseline_lock_open_24" />
+
+        <ImageView
+            android:id="@+id/iv_password_image_show"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_alignStart="@+id/et_password"
+            android:layout_alignTop="@+id/et_password"
+
+            android:layout_alignEnd="@+id/et_password"
+            android:layout_alignBottom="@+id/et_password"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/show_password_logo" />
+
+        <TextView
+            android:id="@+id/tv_password_information"
+            android:layout_width="330dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/et_password"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:text="@string/password_information"
+            android:textSize="12sp"
+            android:lineHeight="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#333333"/>
+
+        <ImageView
+            android:id="@+id/iv_mark_exclamation"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignTop="@+id/tv_password_information"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/mark_exclamation" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_up"
+            android:layout_width="349dp"
+            android:layout_height="52dp"
+            android:layout_below="@+id/tv_password_information"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/sign_up_shape"
+            android:backgroundTint="#FF9D55"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/button_sign_up"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:lineHeight="22sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="349dp"
+            android:layout_height="52dp"
+            android:layout_below="@+id/btn_sign_up"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/sign_in_shape"
+            android:fontFamily="@font/inter_medium"
+            android:lineHeight="22sp"
+            android:text="@string/button_sign_in"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+ </layout>

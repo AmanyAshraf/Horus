@@ -5,4 +5,23 @@
     <string name="skip"><u>Skip</u></string>
     <string name="sign_in_to_start">Sign in to start \nplanning your trip.</string>
     <string name="terms_of">By proceeding, you agree to our <u><b>Team of Use</b></u> and confirm you have read our <u><b>Privacy and Cookie Statement</b></u>.</string>
+    <string name="create_your">Create your Account</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="password_information">Enter a combination of at least six numbers, letters and punctuation marks.</string>
+    <string name="button_sign_up">Sign up</string>
+    <string name="button_sign_in"> Sign in</string>
+    <string name="discover_travel_text">Discover traveler recommended spots near you, wherever you are.</string>
+    <string name="button_allow_location">Allow location data</string>
+    <string name="not_now"><u>Not now</u></string>
+    <string name="let_s_get_basics">Let’s get basics so we can give you the goods.</string>
+    <string name="what_should">What should we call you?</string>
+    <string name="your_name">Your Name</string>
+    <string name="where_do_yo">Where do you live? (Optional)</string>
+    <string name="your_country">Your Country</string>
+    <string name="next_button">Next</string>
+    <string name="custom_dialog_text">Allow Horus to access this device’s location</string>
+    <string name="while_using"> while using the app</string>
+    <string name="only_this_time">Only this time</string>
+    <string name="deny">Deny</string>
 </resources>

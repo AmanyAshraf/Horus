@@ -1,11 +1,11 @@
 package com.example.horus.presentation.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.horus.R
 import com.example.horus.databinding.ActivityLoginBinding
@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             }
         })
         binding.btnSignUpLogin.setOnClickListener(View.OnClickListener {
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
                 startActivity(intent)
         })
         binding.showPasswordLogin.setOnClickListener(View.OnClickListener {
