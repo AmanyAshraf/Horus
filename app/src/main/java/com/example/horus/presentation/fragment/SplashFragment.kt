@@ -1,10 +1,10 @@
 package com.example.horus.presentation.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.databinding.FragmentSplashBinding
@@ -18,6 +18,7 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         binding=FragmentSplashBinding.inflate(inflater,container,false)
 
         binding.skipSplash.setOnClickListener(View.OnClickListener { view?.findNavController()
