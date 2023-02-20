@@ -12,11 +12,13 @@ import com.example.horus.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     var b1=true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding =
             DataBindingUtil.setContentView<ActivityLoginBinding>(this, R.layout.activity_login)
         setContentView(binding.root)
+
         binding.btnSignInLogin.setOnClickListener(View.OnClickListener {
             if ( binding.edPasswordLogin.text.toString().isEmpty() && binding.edEmailLogin.text.toString().isEmpty()) {
                 binding.edPasswordLogin.error = "Required!"
