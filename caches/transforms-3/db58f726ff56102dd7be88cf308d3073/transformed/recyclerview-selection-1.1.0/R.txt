@@ -1,0 +1,1 @@
+int drawable selection_band_overlay 0x0

@@ -1,0 +1,83 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.databinding",
+    "module": "databinding-adapters",
+    "version": "7.3.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.databinding",
+          "module": "databinding-common",
+          "version": {
+            "requires": "7.3.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "databinding-adapters-7.3.0.aar",
+          "url": "databinding-adapters-7.3.0.aar",
+          "size": 81562,
+          "sha512": "95af9cc0f3a59132eb7ad4db2940f5e9ce9ad1e439cb60eb4cfca8aad79b164f895fcb305afdf5010b26581872c55429a4680698ea7bfdda1a795bab4bd0877b",
+          "sha256": "e82a6e9fb88c300e2e79b567e1fdda6637a3e135f889c0fccdf25f82fba10acf",
+          "sha1": "f1cda2d9eaa639cdc0d6a33069dfd867fddcf1bc",
+          "md5": "4dd69f49f0aa531931f1061d40f8f23e"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.databinding",
+          "module": "databinding-runtime",
+          "version": {
+            "requires": "7.3.0"
+          }
+        },
+        {
+          "group": "androidx.databinding",
+          "module": "databinding-common",
+          "version": {
+            "requires": "7.3.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "databinding-adapters-7.3.0.aar",
+          "url": "databinding-adapters-7.3.0.aar",
+          "size": 81562,
+          "sha512": "95af9cc0f3a59132eb7ad4db2940f5e9ce9ad1e439cb60eb4cfca8aad79b164f895fcb305afdf5010b26581872c55429a4680698ea7bfdda1a795bab4bd0877b",
+          "sha256": "e82a6e9fb88c300e2e79b567e1fdda6637a3e135f889c0fccdf25f82fba10acf",
+          "sha1": "f1cda2d9eaa639cdc0d6a33069dfd867fddcf1bc",
+          "md5": "4dd69f49f0aa531931f1061d40f8f23e"
+        }
+      ]
+    }
+  ]
+}
