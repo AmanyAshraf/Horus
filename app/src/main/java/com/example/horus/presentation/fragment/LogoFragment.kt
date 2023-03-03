@@ -12,6 +12,7 @@ import com.example.horus.R
 import com.example.horus.databinding.FragmentLogoBinding
 
 
+@Suppress("DEPRECATION")
 class LogoFragment : Fragment() {
     private lateinit var binding: FragmentLogoBinding
     override fun onCreateView(

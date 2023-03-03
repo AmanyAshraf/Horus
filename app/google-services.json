@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "844085643226",
+    "project_id": "splash-firebase-205f8",
+    "storage_bucket": "splash-firebase-205f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844085643226:android:483dabdc57580b5cd3a2e3",
+        "android_client_info": {
+          "package_name": "com.example.horus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844085643226-snldhe15ml4h9gctegb2g72qp0qd6kq9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.horus",
+            "certificate_hash": "8c5766e974a27c70a722791758fd0060dda91c4c"
+          }
+        },
+        {
+          "client_id": "844085643226-lt1uuh4i8721a7mfl2s9cv0ti713e1ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGKzhjevI5Nepgn_RLPu03am-WuScsIkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844085643226-chji00ta5u1qfmcn62nfa8qo7igicmnj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
