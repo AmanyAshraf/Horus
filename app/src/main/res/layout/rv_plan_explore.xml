@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingEnd="24dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/im_rv_plan_explore"
+        tools:src="@drawable/plan_explore_1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="best seller"
+        android:id="@+id/tv_rv_sellCondition_explore"
+        app:layout_constraintTop_toBottomOf="@+id/im_rv_plan_explore"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black500"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="2dp"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="2dp"
+        android:id="@+id/tv_rv_contentPlan_explore"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_sellCondition_explore"
+        tools:text="Giza Full-Day Private Tour with\nGovernment-Licensed Guide"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="14sp"
+        android:textColor="@color/black500"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stars_explore"
+        app:layout_constraintTop_toBottomOf="@id/tv_rv_contentPlan_explore"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Bus Tour"
+        android:id="@+id/tv_rv_tourKind_explore"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_contentPlan_explore"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black500"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="2dp"
+        android:textSize="12sp"
+        android:layout_marginTop="24dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="2dp"
+        android:id="@+id/tv_rv_pricePlan_explore"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_tourKind_explore"
+        tools:text="from $574 per adult\n(price varies by group size)"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black500"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
