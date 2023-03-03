@@ -6,55 +6,55 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.horus.R
+import com.example.horus.data.database.PlansDataExplore
+import com.example.horus.data.database.ServicesDataExplore
+import com.example.horus.data.database.TopPlacesDataExplore
+import com.example.horus.databinding.FragmentExploreBinding
+import com.example.horus.presentation.adapter.PlansExploreAdapter
+import com.example.horus.presentation.adapter.ServicesExploreAdapter
+import com.example.horus.presentation.adapter.TopPlacesExploreAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ExploreFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ExploreFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private lateinit var binding: FragmentExploreBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore, container, false)
+        binding= FragmentExploreBinding.inflate(inflater,container,false)
+
+        val services = mutableListOf<ServicesDataExplore>(
+            ServicesDataExplore(R.drawable.hotel_explore,"Hotels"),
+            ServicesDataExplore(R.drawable.mesum_explore,"Museums"),
+            ServicesDataExplore(R.drawable.resturant_explore,"Restaurants"),
+            ServicesDataExplore(R.drawable.hospital_explore,"Hospitals"),
+            ServicesDataExplore(R.drawable.bank_explore,"Banks")
+        )
+        val adapterServices = ServicesExploreAdapter()
+        binding.servicesRvExplore.adapter=adapterServices
+        adapterServices.data = services
+
+        val plans = mutableListOf<PlansDataExplore>(
+            PlansDataExplore(R.drawable.plan_explore_1,"BEST SELLER","Giza Full-Day Private Tour with\nGovernment-Licensed Guide","Bus Tour","from \$574 per adult\n(price varies by group size)"),
+            PlansDataExplore(R.drawable.plan_explore_2,"LIKELY TO SELL OUT","Ubud Tour-Best of Ubud-All\nInclusive","Full-day Tour’s","from \$7,469 per adult"),
+            PlansDataExplore(R.drawable.plan_explore_3,"LIKELY TO SELL OUT","Phi Phi Islands Adventure Day\nTrip with Sea view Lunch by V.","Adventure ToursAdventure Tours","from \$7,141.11 per adult")
+        )
+        val adapterPlans = PlansExploreAdapter()
+        binding.plansRvExplore.adapter=adapterPlans
+        adapterPlans.data = plans
+
+        val topPlaces = mutableListOf<TopPlacesDataExplore>(
+            TopPlacesDataExplore(R.drawable.top_places_explore,"Pyramids"),
+            TopPlacesDataExplore(R.drawable.top_places_explore,"Pyramids"),
+            TopPlacesDataExplore(R.drawable.top_places_explore,"Pyramids")
+
+        )
+        val adapterTopPlaces = TopPlacesExploreAdapter()
+        binding.topPlacesRvExplore.adapter=adapterTopPlaces
+        adapterTopPlaces.data = topPlaces
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ExploreFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ExploreFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

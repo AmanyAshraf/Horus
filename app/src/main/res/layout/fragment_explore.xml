@@ -1,14 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.fragment.ExploreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <data>
 
-</FrameLayout>
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avatar"
+                android:id="@+id/im_avatar_profile_explore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi, Amany"
+                app:layout_constraintStart_toEndOf="@id/im_avatar_profile_explore"
+                app:layout_constraintTop_toTopOf="@id/im_avatar_profile_explore"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black500"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:id="@+id/tv_hi_profile_explore"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/notification"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/im_avatar_profile_explore"
+                android:text="@string/explore"
+                android:textSize="32sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:id="@+id/tv_welcome_explore"
+                android:textColor="@color/black500"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/services_rv_explore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:clipToPadding="true"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_welcome_explore"
+                tools:listitem="@layout/rv_services_explore" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top experiences on Horus"
+                android:textSize="24sp"
+                android:textColor="@color/black500"
+                android:fontFamily="@font/poppins_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="24sp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/services_rv_explore"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The best tours, activities and tickets"
+                android:textSize="16sp"
+                android:textColor="@color/black400"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="24sp"
+                android:layout_marginTop="72dp"
+                app:layout_constraintTop_toBottomOf="@+id/services_rv_explore"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/plans_rv_explore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="112dp"
+                android:clipToPadding="true"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintTop_toBottomOf="@id/services_rv_explore"
+                tools:listitem="@layout/rv_plan_explore" />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/plans_rv_explore"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/event_explore"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="48dp"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/plans_rv_explore"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="276dp"
+                    android:text="@string/do_not_miss"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/plans_rv_explore"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="396dp"
+                android:text="The transfer of the Egyptian mummy is happening now"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16sp"
+                android:id="@+id/tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/event_button_explore"
+                android:text="Read more"
+                android:textSize="16sp"
+                android:textColor="@color/black500"
+                android:fontFamily="@font/poppins_medium"
+                android:textAllCaps="false"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:id="@+id/readMoreEvent_explore"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_marginTop="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/readMoreEvent_explore"
+                android:layout_marginTop="96dp"
+                android:text="Top destinations for your next holiday"
+                android:textSize="24sp"
+                android:textColor="@color/black500"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/readMoreEvent_explore"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="172dp"
+                android:text="Here’s where your fellow travellers are headed"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/black400"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/topPlaces_rv_explore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="236dp"
+                android:clipToPadding="true"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintTop_toBottomOf="@id/readMoreEvent_explore"
+                tools:listitem="@layout/rv_top_places_explore"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
+</layout>

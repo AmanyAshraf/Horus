@@ -16,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
             DataBindingUtil.setContentView<ActivitySplashBinding>(this, R.layout.activity_splash)
         setContentView(binding.root)
         val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
+            supportFragmentManager.findFragmentById(R.id.myNavHostFragmentSplash) as NavHostFragment
         appBarConfiguration = AppBarConfiguration(navHostFragment.navController.graph)
 
 
