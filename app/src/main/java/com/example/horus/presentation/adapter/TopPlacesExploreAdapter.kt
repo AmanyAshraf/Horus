@@ -1,5 +1,6 @@
 package com.example.horus.presentation.adapter
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,4 +36,3 @@ class TopPlacesExploreAdapter : RecyclerView.Adapter<TopPlacesExploreAdapter.Vie
         }
     }
 
-}

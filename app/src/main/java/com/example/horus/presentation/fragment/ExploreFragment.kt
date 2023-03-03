@@ -10,7 +10,6 @@ import com.example.horus.data.database.PlansDataExplore
 import com.example.horus.data.database.ServicesDataExplore
 import com.example.horus.data.database.TopPlacesDataExplore
 import com.example.horus.databinding.FragmentExploreBinding
-import com.example.horus.databinding.FragmentSplashBinding
 import com.example.horus.presentation.adapter.PlansExploreAdapter
 import com.example.horus.presentation.adapter.ServicesExploreAdapter
 import com.example.horus.presentation.adapter.TopPlacesExploreAdapter

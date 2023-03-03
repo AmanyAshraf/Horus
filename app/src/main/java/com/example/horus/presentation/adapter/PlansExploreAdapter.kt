@@ -1,5 +1,6 @@
 package com.example.horus.presentation.adapter
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,5 +38,3 @@ class PlansExploreAdapter : RecyclerView.Adapter<PlansExploreAdapter.ViewHolder>
             findViewById<ImageView>(R.id.im_rv_plan_explore).setImageResource(item.img)
         }
     }
-
-}
