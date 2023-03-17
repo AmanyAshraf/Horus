@@ -26,4 +26,20 @@
     <string name="deny">Deny</string>
     <string name="explore">Let\'s start \nyour vacation!</string>
     <string name="do_not_miss">Do not miss the \nEgyptian event</string>
+    <string name="Dubai"><u>Dubai</u></string>
+    <string name="Visit_website"><u>Visit website</u></string>
+    <string name="Read_more"><u>Read more</u></string>
+    <string name="AI_Barsha_Road"><u>AI Barsha Road, Dubai 72584 United Arab      Emirates</u></string>
+    <string name="Reviews"><u>Reviews</u></string>
+    <string name="Q_A">Q&amp;A</string>
+    <string name="cairo"><u>Cairo</u></string>
+    <string name="call"><u>Call</u></string>
+    <string name="information"><u>1024 Cameron St Corner of Cameron and Henry, Alexandria, VA 22314-2427</u></string>
+    <string name="see_more"><u>See more</u></string>
+    <string name="the_egyptain"><u>The Egyptian Museum</u></string>
+    <string name="alexandria"><u>Alexandria</u></string>
+    <string name="Egypt_Cairo"><u>Egypt/Cairo</u></string>
+    <string name="inform"><u>1024 Cameron St Corner of Cameron and Henry, Alexandria, VA 22314-2427</u></string>
+    <string name="giza"><u>Giza</u></string>
+    <string name="pyr_address"><u>1024 Cameron St Corner of Cameron and Henry, Alexandria, VA 22314-2427</u></string>
 </resources>
