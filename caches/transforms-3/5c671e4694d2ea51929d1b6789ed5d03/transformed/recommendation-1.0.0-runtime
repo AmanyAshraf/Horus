@@ -1,0 +1,9 @@
+androidx.recommendation.app.ContentRecommendation
+androidx.recommendation.app.ContentRecommendation$Builder
+androidx.recommendation.app.ContentRecommendation$ContentMaturity
+androidx.recommendation.app.ContentRecommendation$ContentPricing
+androidx.recommendation.app.ContentRecommendation$ContentStatus
+androidx.recommendation.app.ContentRecommendation$ContentType
+androidx.recommendation.app.ContentRecommendation$IntentData
+androidx.recommendation.app.ContentRecommendation$IntentType
+androidx.recommendation.app.RecommendationExtender
