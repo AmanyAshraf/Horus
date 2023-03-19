@@ -1,5 +1,6 @@
 package com.example.horus.presentation.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.MuseumData
 import com.example.horus.databinding.FragmentMuseumsBinding
+import com.example.horus.presentation.activity.EgyptainMuseumActivity
 import com.example.horus.presentation.adapter.MuseumAdapter
 
 
@@ -26,10 +28,11 @@ class MuseumsFragment : Fragment() {
         val adapterMuseum =MuseumAdapter()
         binding.rvMuseum.adapter =adapterMuseum
         adapterMuseum.data =museums
+        val intent = Intent(this.requireContext(), EgyptainMuseumActivity::class.java)
         adapterMuseum.setOnItemClickListener(object : MuseumAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 when(position){
-                    0-> view?.findNavController()?.navigate(R.id.egyptianMuseumFragment)
+                    0->startActivity(intent)
                 }
             }
         })

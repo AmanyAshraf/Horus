@@ -52,9 +52,6 @@
         <action
             android:id="@+id/action_hotelFragment_to_exploreFragment"
             app:destination="@id/exploreFragment" />
-        <action
-            android:id="@+id/action_hotelFragment_to_doubleTreeHotelFragment"
-            app:destination="@id/doubleTreeHotelFragment" />
     </fragment>
     <fragment
         android:id="@+id/museumsFragment"
@@ -115,15 +112,6 @@
         android:name="com.example.horus.presentation.fragment.CairoBankFragment"
         android:label="fragment_cairo_bank"
         tools:layout="@layout/fragment_cairo_bank" />
-    <fragment
-        android:id="@+id/doubleTreeHotelFragment"
-        android:name="com.example.horus.presentation.fragment.DoubleTreeHotelFragment"
-        android:label="fragment_double_tree_hotel"
-        tools:layout="@layout/fragment_double_tree_hotel" >
-        <action
-            android:id="@+id/action_doubleTreeHotelFragment_to_placesReviewFragment"
-            app:destination="@id/placesReviewFragment" />
-    </fragment>
     <fragment
         android:id="@+id/cancerHospitalFragment"
         android:name="com.example.horus.presentation.fragment.CancerHospitalFragment"

@@ -1,5 +1,6 @@
 package com.example.horus.presentation.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,12 +10,14 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.HotelData
 import com.example.horus.databinding.FragmentHotelBinding
+import com.example.horus.presentation.activity.DoubleTreeHotalActivity
 import com.example.horus.presentation.adapter.HotelAdapter
 
 
 @Suppress("UNREACHABLE_CODE")
 class HotelFragment : Fragment() {
     private lateinit var binding: FragmentHotelBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,10 +34,13 @@ class HotelFragment : Fragment() {
         val adapterHotel =HotelAdapter()
         binding.rvHotel.adapter =adapterHotel
         adapterHotel.data=hotels
+        val intent = Intent(this.requireContext(), DoubleTreeHotalActivity::class.java)
         adapterHotel.setOnItemClickListener(object :HotelAdapter.onItemClickListener{
+
             override fun onItemClick(position: Int) {
                 when(position){
-                    0-> view?.findNavController()?.navigate(R.id.doubleTreeHotelFragment)
+
+                    0->startActivity(intent)
                 }
             }
         })

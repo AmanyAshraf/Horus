@@ -1,5 +1,6 @@
 package com.example.horus.presentation.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.BankData
 import com.example.horus.databinding.FragmentBanksBinding
+import com.example.horus.presentation.activity.CairoBankActivity
 import com.example.horus.presentation.adapter.BankAdapter
 
 
@@ -29,10 +31,11 @@ class BanksFragment : Fragment() {
         val adapterBank =BankAdapter()
         binding.rvBank.adapter=adapterBank
         adapterBank.data=Banks
+        val intent = Intent(this.requireContext(), CairoBankActivity::class.java)
         adapterBank.setOnItemClickListener(object : BankAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 when(position){
-                    0-> view?.findNavController()?.navigate(R.id.cairoBankFragment)
+                    0-> startActivity(intent)
                 }
             }
         })

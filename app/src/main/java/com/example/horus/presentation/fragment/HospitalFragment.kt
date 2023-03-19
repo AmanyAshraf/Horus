@@ -1,5 +1,6 @@
 package com.example.horus.presentation.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.HospitalData
 import com.example.horus.databinding.FragmentHospitalBinding
+import com.example.horus.presentation.activity.CancerHosptalActivity
 import com.example.horus.presentation.adapter.HospitalAdapter
 
 
@@ -28,10 +30,11 @@ class HospitalFragment : Fragment() {
         val adapterHospital = HospitalAdapter()
         binding.rvHospital.adapter =adapterHospital
         adapterHospital.data=hospitals
+        val intent = Intent(this.requireContext(), CancerHosptalActivity::class.java)
         adapterHospital.setOnItemClickListener(object : HospitalAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 when(position){
-                    0-> view?.findNavController()?.navigate(R.id.cancerHospitalFragment)
+                    0-> startActivity(intent)
                 }
             }
         })

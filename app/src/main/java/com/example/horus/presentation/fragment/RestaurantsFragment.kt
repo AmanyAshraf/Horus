@@ -1,5 +1,6 @@
 package com.example.horus.presentation.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.ResturantData
 import com.example.horus.databinding.FragmentRestaurantsBinding
+import com.example.horus.presentation.activity.OldHouseRestaurantActivity
 import com.example.horus.presentation.adapter.ResturantAdapter
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,10 +38,11 @@ class RestaurantsFragment : Fragment() {
         val adapterResturant = ResturantAdapter()
         binding.rvRestaurant.adapter =adapterResturant
         adapterResturant.data=Restaurants
+        val intent = Intent(this.requireContext(), OldHouseRestaurantActivity::class.java)
         adapterResturant.setOnItemClickListener(object : ResturantAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 when(position){
-                    0-> view?.findNavController()?.navigate(R.id.alexResturantFragment)
+                    0-> startActivity(intent)
                 }
             }
         })
