@@ -1,23 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
     </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <FrameLayout
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".presentation.fragment.CommunityFragment">
 
-        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:id="@+id/iv_back_arrow_commuinty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:layout_marginTop="121dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:id="@+id/tv_community"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="116dp"
+            android:layout_marginStart="90dp"
+            android:text="Community"
+            android:textSize="16sp"
+            android:lineHeight="24sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#333333"
+            app:layout_constraintStart_toEndOf="@id/iv_back_arrow_commuinty"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    </FrameLayout>
+        <ImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginEnd="22dp"
+            android:src="@drawable/notification"
+            app:layout_constraintStart_toEndOf="@id/tv_community"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avatar"
+            android:layout_marginTop="61dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_back_arrow_commuinty" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_in_your_mind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/search_button"
+            android:paddingStart="16dp"
+            android:paddingEnd="23dp"
+            android:text="what is on your mind?"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/tv_community" />
+
+        <ImageView
+            android:id="@+id/iv_group_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group"
+            android:layout_marginTop="58dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_in_your_mind"
+            app:layout_constraintTop_toBottomOf="@+id/iv_notification" />
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="#E6E6E6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_in_your_mind"
+            />
+
+        <ImageView
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/frame"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_line1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
 </layout>
 
