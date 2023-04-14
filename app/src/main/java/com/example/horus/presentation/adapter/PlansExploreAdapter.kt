@@ -13,12 +13,11 @@ import com.example.horus.data.database.PlansDataExplore
 class PlansExploreAdapter : RecyclerView.Adapter<PlansExploreAdapter.ViewHolder>() {
 
 
-
     var data: MutableList<PlansDataExplore> = mutableListOf()
-    set(value) {
-        field = value
-        notifyDataSetChanged()
-    }
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(
@@ -38,3 +37,4 @@ class PlansExploreAdapter : RecyclerView.Adapter<PlansExploreAdapter.ViewHolder>
             findViewById<ImageView>(R.id.im_rv_plan_explore).setImageResource(item.img)
         }
     }
+}
