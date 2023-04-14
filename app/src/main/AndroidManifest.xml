@@ -20,6 +20,12 @@
         android:theme="@style/Theme.Horus"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.activity.EventActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
             android:name=".presentation.activity.AntiquesActivity"
             android:exported="false" />
         <activity

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id "kotlin-kapt"
 }
 
 android {
@@ -53,7 +54,6 @@ dependencies {
     implementation "com.facebook.android:facebook-android-sdk:4.42.0"
     //recycleView
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
     implementation "androidx.recommendation:recommendation:1.0.0"
     implementation "androidx.recyclerview:recyclerview:1.2.1"
 
@@ -61,19 +61,31 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
+    //Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
     implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
     implementation "com.google.android.gms:play-services-location:21.0.1"
 
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
 
-    // Retrofit & OkHttp
+
+    // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
-    // JSON Converter
+    // JSON Converter & OkHttp
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+
+    //room
+    implementation "androidx.room:room-runtime:2.4.0"
+    kapt "androidx.room:room-compiler:2.4.0"
+
+    //Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+
 
     implementation 'com.karumi:dexter:6.2.2'
     implementation ("io.coil-kt:coil:1.1.1")

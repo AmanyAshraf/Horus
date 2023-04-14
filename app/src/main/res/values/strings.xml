@@ -26,6 +26,9 @@
     <string name="deny">Deny</string>
     <string name="explore">Let\'s start \nyour vacation!</string>
     <string name="do_not_miss">Do not miss the \nEgyptian event</string>
+
+    <string name="event">Lorem ipsum dolor sit amet consectetur. Purus in sem habitant urna dolor vitae non purus. Sem aliquam feugiat ut varius. Mattis auctor... <u><b>See more</b></u></string>
+
     <string name="Dubai"><u>Dubai</u></string>
     <string name="Visit_website"><u>Visit website</u></string>
     <string name="Read_more"><u>Read more</u></string>
@@ -42,4 +45,5 @@
     <string name="inform"><u>1024 Cameron St Corner of Cameron and Henry, Alexandria, VA 22314-2427</u></string>
     <string name="giza"><u>Giza</u></string>
     <string name="pyr_address"><u>1024 Cameron St Corner of Cameron and Henry, Alexandria, VA 22314-2427</u></string>
+
 </resources>

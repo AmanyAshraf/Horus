@@ -13,5 +13,6 @@
     <color name="black400">#666666</color>
     <color name="black300">#999999</color>
     <color name="red">#FF9494</color>
+    <color name="red_orange">#FFF3EA</color>
 
 </resources>
