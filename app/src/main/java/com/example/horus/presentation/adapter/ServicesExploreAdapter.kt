@@ -12,8 +12,6 @@ import com.example.horus.data.database.ServicesDataExplore
 
 class ServicesExploreAdapter : RecyclerView.Adapter<ServicesExploreAdapter.ViewHolder>() {
 
-
-
         var data: MutableList<ServicesDataExplore> = mutableListOf()
             set(value) {
                 field = value

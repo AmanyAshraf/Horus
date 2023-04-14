@@ -1,15 +1,19 @@
 package com.example.horus.presentation.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.PlansDataExplore
 import com.example.horus.data.database.ServicesDataExplore
 import com.example.horus.data.database.TopPlacesDataExplore
 import com.example.horus.databinding.FragmentExploreBinding
+import com.example.horus.databinding.FragmentSplashBinding
+import com.example.horus.presentation.activity.EventActivity
 import com.example.horus.presentation.adapter.PlansExploreAdapter
 import com.example.horus.presentation.adapter.ServicesExploreAdapter
 import com.example.horus.presentation.adapter.TopPlacesExploreAdapter
@@ -53,6 +57,11 @@ class ExploreFragment : Fragment() {
         val adapterTopPlaces = TopPlacesExploreAdapter()
         binding.topPlacesRvExplore.adapter=adapterTopPlaces
         adapterTopPlaces.data = topPlaces
+       binding.readMoreEventExplore.setOnClickListener(View.OnClickListener {
+
+           val intent = Intent(activity, EventActivity::class.java)
+           activity?.startActivity(intent)
+        })
 
         return binding.root
     }
