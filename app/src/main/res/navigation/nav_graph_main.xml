@@ -9,12 +9,38 @@
         android:id="@+id/exploreFragment"
         android:name="com.example.horus.presentation.fragment.ExploreFragment"
         android:label="ExploreFragment"
-        tools:layout="@layout/fragment_explore"/>
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_exploreFragment_to_hotelFragment"
+            app:destination="@id/hotelFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_museumsFragment"
+            app:destination="@id/museumsFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_restaurantsFragment"
+            app:destination="@id/restaurantsFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_hospitalFragment"
+            app:destination="@id/hospitalFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_banksFragment"
+            app:destination="@id/banksFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_pyramidsFragment"
+            app:destination="@id/pyramidsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/communityFragment"
         android:name="com.example.horus.presentation.fragment.CommunityFragment"
         android:label="CommunityFragment"
-        tools:layout="@layout/fragment_community"/>
+        tools:layout="@layout/fragment_community">
+        <action
+            android:id="@+id/action_communityFragment_to_createPostFragment"
+            app:destination="@id/createPostFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_createPostImageFragment"
+            app:destination="@id/createPostImageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/planFragment"
         android:name="com.example.horus.presentation.fragment.PlanFragment"
@@ -25,4 +51,62 @@
         android:name="com.example.horus.presentation.fragment.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search"/>
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="com.example.horus.presentation.fragment.HotelFragment"
+        android:label="fragment_hotel"
+        tools:layout="@layout/fragment_hotel" >
+        <action
+            android:id="@+id/action_hotelFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/museumsFragment"
+        android:name="com.example.horus.presentation.fragment.MuseumsFragment"
+        android:label="fragment_museums"
+        tools:layout="@layout/fragment_museums" />
+    <fragment
+        android:id="@+id/restaurantsFragment"
+        android:name="com.example.horus.presentation.fragment.RestaurantsFragment"
+        android:label="fragment_restaurants"
+        tools:layout="@layout/fragment_restaurants" />
+    <fragment
+        android:id="@+id/hospitalFragment"
+        android:name="com.example.horus.presentation.fragment.HospitalFragment"
+        android:label="fragment_hospital"
+        tools:layout="@layout/fragment_hospital" >
+        <action
+            android:id="@+id/action_hospitalFragment_to_cancerHospitalFragment"
+            app:destination="@id/cancerHospitalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/banksFragment"
+        android:name="com.example.horus.presentation.fragment.BanksFragment"
+        android:label="fragment_banks"
+        tools:layout="@layout/fragment_banks" />
+    <fragment
+        android:id="@+id/cancerHospitalFragment"
+        android:name="com.example.horus.presentation.fragment.CancerHospitalFragment"
+        android:label="fragment_cancer_hospital"
+        tools:layout="@layout/fragment_cancer_hospital" />
+    <fragment
+        android:id="@+id/pyramidsFragment"
+        android:name="com.example.horus.presentation.fragment.PyramidsFragment"
+        android:label="fragment_pyramids"
+        tools:layout="@layout/fragment_pyramids" />
+    <fragment
+        android:id="@+id/placesReviewFragment"
+        android:name="com.example.horus.presentation.fragment.PlacesReviewFragment"
+        android:label="fragment_places_review"
+        tools:layout="@layout/fragment_places_review" />
+    <fragment
+        android:id="@+id/createPostFragment"
+        android:name="com.example.horus.presentation.fragment.CreatePostFragment"
+        android:label="fragment_create_post"
+        tools:layout="@layout/fragment_create_post" />
+    <fragment
+        android:id="@+id/createPostImageFragment"
+        android:name="com.example.horus.presentation.fragment.CreatePostImageFragment"
+        android:label="fragment_create_post_image"
+        tools:layout="@layout/fragment_create_post_image" />
 </navigation>

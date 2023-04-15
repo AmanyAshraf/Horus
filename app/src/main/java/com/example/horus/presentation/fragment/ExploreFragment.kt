@@ -1,12 +1,16 @@
 package com.example.horus.presentation.fragment
 
+import ServicesExploreAdapter
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+
 import com.example.horus.R
 import com.example.horus.data.database.PlansDataExplore
 import com.example.horus.data.database.ServicesDataExplore
@@ -15,7 +19,6 @@ import com.example.horus.databinding.FragmentExploreBinding
 import com.example.horus.databinding.FragmentSplashBinding
 import com.example.horus.presentation.activity.EventActivity
 import com.example.horus.presentation.adapter.PlansExploreAdapter
-import com.example.horus.presentation.adapter.ServicesExploreAdapter
 import com.example.horus.presentation.adapter.TopPlacesExploreAdapter
 
 
@@ -35,9 +38,24 @@ class ExploreFragment : Fragment() {
             ServicesDataExplore(R.drawable.hospital_explore,"Hospitals"),
             ServicesDataExplore(R.drawable.bank_explore,"Banks")
         )
+
         val adapterServices = ServicesExploreAdapter()
         binding.servicesRvExplore.adapter=adapterServices
         adapterServices.data = services
+        adapterServices.setOnItemClickListener(object :ServicesExploreAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+
+                when(position){
+                    0-> view?.findNavController()?.navigate(R.id.hotelFragment)
+                    1->view?.findNavController()?.navigate(R.id.museumsFragment)
+                    2->view?.findNavController()?.navigate(R.id.restaurantsFragment)
+                    3->view?.findNavController()?.navigate(R.id.hospitalFragment)
+                    4->view?.findNavController()?.navigate(R.id.banksFragment)
+                }
+
+            }
+
+        })
 
         val plans = mutableListOf<PlansDataExplore>(
             PlansDataExplore(R.drawable.plan_explore_1,"BEST SELLER","Giza Full-Day Private Tour with\nGovernment-Licensed Guide","Bus Tour","from \$574 per adult\n(price varies by group size)"),
@@ -54,16 +72,24 @@ class ExploreFragment : Fragment() {
             TopPlacesDataExplore(R.drawable.top_places_explore,"Pyramids")
 
         )
+
         val adapterTopPlaces = TopPlacesExploreAdapter()
         binding.topPlacesRvExplore.adapter=adapterTopPlaces
         adapterTopPlaces.data = topPlaces
-       binding.readMoreEventExplore.setOnClickListener(View.OnClickListener {
+        adapterTopPlaces.setOnItemClickListener(object : TopPlacesExploreAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
 
-           val intent = Intent(activity, EventActivity::class.java)
-           activity?.startActivity(intent)
+                when(position){
+                    0->view?.findNavController()?.navigate(R.id.pyramidsFragment)
+                }
+            }
         })
+        binding.readMoreEventExplore.setOnClickListener(View.OnClickListener {
 
-        return binding.root
+            val intent = Intent(activity, EventActivity::class.java)
+            activity?.startActivity(intent)
+        })
+            return binding.root
     }
 
 }
