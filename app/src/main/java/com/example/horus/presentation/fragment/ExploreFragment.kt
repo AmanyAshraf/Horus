@@ -6,17 +6,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+
 
 import com.example.horus.R
 import com.example.horus.data.database.PlansDataExplore
 import com.example.horus.data.database.ServicesDataExplore
 import com.example.horus.data.database.TopPlacesDataExplore
 import com.example.horus.databinding.FragmentExploreBinding
-import com.example.horus.databinding.FragmentSplashBinding
 import com.example.horus.presentation.activity.EventActivity
 import com.example.horus.presentation.adapter.PlansExploreAdapter
 import com.example.horus.presentation.adapter.TopPlacesExploreAdapter
@@ -72,7 +72,6 @@ class ExploreFragment : Fragment() {
             TopPlacesDataExplore(R.drawable.top_places_explore,"Pyramids")
 
         )
-
         val adapterTopPlaces = TopPlacesExploreAdapter()
         binding.topPlacesRvExplore.adapter=adapterTopPlaces
         adapterTopPlaces.data = topPlaces
@@ -89,7 +88,7 @@ class ExploreFragment : Fragment() {
             val intent = Intent(activity, EventActivity::class.java)
             activity?.startActivity(intent)
         })
-            return binding.root
+        return binding.root
     }
 
 }
