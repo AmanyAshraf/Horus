@@ -1,6 +1,3 @@
-package com.example.horus.presentation.adapter
-
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,8 +10,7 @@ import com.example.horus.data.database.ServicesDataExplore
 class ServicesExploreAdapter : RecyclerView.Adapter<ServicesExploreAdapter.ViewHolder>() {
     private lateinit var mListener: onItemClickListener
 
-
-        var data: MutableList<ServicesDataExplore> = mutableListOf()
+    var data: MutableList<ServicesDataExplore> = mutableListOf()
             set(value) {
                 field = value
                 notifyDataSetChanged()
@@ -28,15 +24,10 @@ class ServicesExploreAdapter : RecyclerView.Adapter<ServicesExploreAdapter.ViewH
         mListener=listener
     }
 
-    var data: MutableList<ServicesDataExplore> = mutableListOf()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-           val itemView =LayoutInflater.from(parent.context).inflate(R.layout.rv_services_explore, parent, false)
+        val itemView =LayoutInflater.from(parent.context).inflate(R.layout.rv_services_explore, parent, false)
 
 
         return ViewHolder(itemView,mListener)
@@ -60,4 +51,3 @@ class ServicesExploreAdapter : RecyclerView.Adapter<ServicesExploreAdapter.ViewH
         }
     }
 }
-
