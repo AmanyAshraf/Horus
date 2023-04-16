@@ -1,23 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".presentation.fragment.SearchFragment">
-
-        <!-- TODO: Update blank fragment layout -->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Search"
+            android:layout_marginTop="72dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black500"
+            android:layout_marginStart="24dp"
+            android:textSize="32sp"/>
 
-    </FrameLayout>
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:id="@+id/materialCardView"
+           app:cardUseCompatPadding="true"
+           android:layout_marginTop="134dp"
+           android:layout_marginStart="24dp"
+           android:layout_marginEnd="24dp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:cardCornerRadius="32dp"
+           android:drawableEnd="@drawable/camera_ic"
+           android:elevation="12dp">
+           <androidx.appcompat.widget.SearchView
+               android:id="@+id/searchView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:queryHint="Where to?"
+               app:iconifiedByDefault="false"
+               app:queryBackground="@android:color/transparent"/>
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/cameraSearch"
+               android:src="@drawable/camera_ic"
+               android:layout_gravity="end|center"
+               android:layout_marginEnd="18dp"/>
+
+       </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialCardView"
+            android:id="@+id/nearby">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nearby"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nearby"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                android:textColor="@color/black500"
+                android:layout_marginStart="16dp"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nearby"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:id="@+id/rv_places_search"
+            tools:listitem="@layout/rv_bank" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 
