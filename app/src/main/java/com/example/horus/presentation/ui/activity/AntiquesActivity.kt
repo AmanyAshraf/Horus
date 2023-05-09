@@ -1,4 +1,4 @@
-package com.example.horus.presentation.activity
+package com.example.horus.presentation.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,7 +15,7 @@ class AntiquesActivity : AppCompatActivity() {
 
         setContentView(binding.root)
         binding.ivBackArrowAntiques.setOnClickListener {
-            val intent =Intent(this,EgyptainMuseumActivity::class.java)
+            val intent =Intent(this, EgyptainMuseumActivity::class.java)
             startActivity(intent)
         }
 

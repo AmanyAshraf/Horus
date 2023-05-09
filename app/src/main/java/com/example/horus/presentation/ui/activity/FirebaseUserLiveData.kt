@@ -1,4 +1,4 @@
-package com.example.horus.presentation.activity
+package com.example.horus.presentation.ui.activity
 
 import androidx.lifecycle.LiveData
 import com.google.firebase.auth.FirebaseAuth

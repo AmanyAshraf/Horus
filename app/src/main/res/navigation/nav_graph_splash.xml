@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/logoFragment"
-        android:name="com.example.horus.presentation.fragment.LogoFragment"
+        android:name="com.example.horus.presentation.ui.fragment.LogoFragment"
         android:label="fragment_logo"
         tools:layout="@layout/fragment_logo">
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.horus.presentation.fragment.SplashFragment"
+        android:name="com.example.horus.presentation.ui.fragment.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <activity
         android:id="@+id/loginActivity"
-        android:name="com.example.horus.presentation.activity.LoginActivity"
+        android:name="com.example.horus.presentation.ui.activity.LoginActivity"
         android:label="LoginActivity"
         tools:layout="@layout/activity_login"
         />

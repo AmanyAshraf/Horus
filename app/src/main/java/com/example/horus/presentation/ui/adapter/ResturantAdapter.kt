@@ -1,4 +1,4 @@
-package com.example.horus.presentation.adapter
+package com.example.horus.presentation.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -37,7 +37,7 @@ class ResturantAdapter : RecyclerView.Adapter<ResturantAdapter.ViewHolder>(){
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(data[position])
     }
-    class ViewHolder (itemView: View, listener:onItemClickListener) :
+    class ViewHolder (itemView: View, listener: onItemClickListener) :
         RecyclerView.ViewHolder(itemView) {
         fun bind(item: ResturantData) = with(itemView) {
             findViewById<TextView>(R.id.tv_rv_hospital).text = item.name

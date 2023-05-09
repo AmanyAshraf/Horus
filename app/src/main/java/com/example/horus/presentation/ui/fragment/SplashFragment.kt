@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import android.app.Activity
 import android.content.Intent
@@ -14,8 +14,8 @@ import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.databinding.FragmentSplashBinding
-import com.example.horus.presentation.activity.LoginViewModel
-import com.example.horus.presentation.activity.MainActivity
+import com.example.horus.presentation.viewmodel.LoginViewModel
+import com.example.horus.presentation.ui.activity.MainActivity
 import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
@@ -241,7 +241,7 @@ class SplashFragment : Fragment() {
                     Log.d(TAG,"firebaseAuthWithGoogle:Exiting user...\n$email")
                         Toast.makeText(this@SplashFragment.requireContext(),"LoggedIn...\n$email",Toast.LENGTH_SHORT).show()
                 }
-                startActivity(Intent(this.requireContext(),MainActivity::class.java))
+                startActivity(Intent(this.requireContext(), MainActivity::class.java))
             }
             .addOnFailureListener {e->
             Log.d(TAG,"firebaseAuthWithGoogle: Logged failed due to ${e.message}")

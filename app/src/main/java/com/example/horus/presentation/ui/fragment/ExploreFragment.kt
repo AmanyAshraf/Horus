@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import ServicesExploreAdapter
 import android.content.Intent
@@ -17,9 +17,9 @@ import com.example.horus.data.database.PlansDataExplore
 import com.example.horus.data.database.ServicesDataExplore
 import com.example.horus.data.database.TopPlacesDataExplore
 import com.example.horus.databinding.FragmentExploreBinding
-import com.example.horus.presentation.activity.EventActivity
-import com.example.horus.presentation.adapter.PlansExploreAdapter
-import com.example.horus.presentation.adapter.TopPlacesExploreAdapter
+import com.example.horus.presentation.ui.activity.EventActivity
+import com.example.horus.presentation.ui.adapter.PlansExploreAdapter
+import com.example.horus.presentation.ui.adapter.TopPlacesExploreAdapter
 
 
 class ExploreFragment : Fragment() {

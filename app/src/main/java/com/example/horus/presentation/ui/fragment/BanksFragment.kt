@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.BankData
 import com.example.horus.databinding.FragmentBanksBinding
-import com.example.horus.presentation.activity.CairoBankActivity
-import com.example.horus.presentation.adapter.BankAdapter
+import com.example.horus.presentation.ui.activity.CairoBankActivity
+import com.example.horus.presentation.ui.adapter.BankAdapter
 
 
 class BanksFragment : Fragment() {
@@ -28,7 +28,7 @@ class BanksFragment : Fragment() {
             BankData(R.drawable.cairo_bank,"Alahaly Bank")
 
         )
-        val adapterBank =BankAdapter()
+        val adapterBank = BankAdapter()
         binding.rvBank.adapter=adapterBank
         adapterBank.data=Banks
         val intent = Intent(this.requireContext(), CairoBankActivity::class.java)

@@ -1,4 +1,4 @@
-package com.example.horus.presentation.activity
+package com.example.horus.presentation.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,11 +9,11 @@ import com.example.horus.R
 import com.example.horus.data.database.AntiquseDataMuseums
 import com.example.horus.data.database.InstructionDataMuseums
 import com.example.horus.databinding.ActivityEgyptainMuseumBinding
-import com.example.horus.presentation.adapter.AntiquesMuseumsAdapter
-import com.example.horus.presentation.adapter.InstructionMuseumsAdapter
-import com.example.horus.presentation.fragment.MuseumsFragment
-import com.example.horus.presentation.fragment.PlacesReviewFragment
-import com.example.horus.presentation.fragment.QFragment
+import com.example.horus.presentation.ui.adapter.AntiquesMuseumsAdapter
+import com.example.horus.presentation.ui.adapter.InstructionMuseumsAdapter
+import com.example.horus.presentation.ui.fragment.MuseumsFragment
+import com.example.horus.presentation.ui.fragment.PlacesReviewFragment
+import com.example.horus.presentation.ui.fragment.QFragment
 
 class EgyptainMuseumActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class EgyptainMuseumActivity : AppCompatActivity() {
         val adapterAntiques = AntiquesMuseumsAdapter()
         binding.rvAntiques.adapter =adapterAntiques
         adapterAntiques.data = antiques
-        val intent =Intent(this ,AntiquesActivity::class.java)
+        val intent =Intent(this , AntiquesActivity::class.java)
         adapterAntiques.setOnItemClickListener(object : AntiquesMuseumsAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 when(position){
@@ -45,7 +45,7 @@ class EgyptainMuseumActivity : AppCompatActivity() {
         binding.rvInstruction.adapter=adapterinstruction
         adapterinstruction.data=instruction
         binding.ivBackArrowMuseums.setOnClickListener {
-            val intent =Intent(this ,MuseumsFragment::class.java)
+            val intent =Intent(this , MuseumsFragment::class.java)
             startActivity(intent)
         }
 

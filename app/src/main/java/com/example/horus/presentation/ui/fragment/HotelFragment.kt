@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.HotelData
 import com.example.horus.databinding.FragmentHotelBinding
-import com.example.horus.presentation.activity.DoubleTreeHotalActivity
-import com.example.horus.presentation.adapter.HotelAdapter
+import com.example.horus.presentation.ui.activity.DoubleTreeHotalActivity
+import com.example.horus.presentation.ui.adapter.HotelAdapter
 
 
 @Suppress("UNREACHABLE_CODE")
@@ -31,11 +31,11 @@ class HotelFragment : Fragment() {
            HotelData(R.drawable.hotel_view,"MASSA Hotel")
 
        )
-        val adapterHotel =HotelAdapter()
+        val adapterHotel = HotelAdapter()
         binding.rvHotel.adapter =adapterHotel
         adapterHotel.data=hotels
         val intent = Intent(this.requireContext(), DoubleTreeHotalActivity::class.java)
-        adapterHotel.setOnItemClickListener(object :HotelAdapter.onItemClickListener{
+        adapterHotel.setOnItemClickListener(object : HotelAdapter.onItemClickListener{
 
             override fun onItemClick(position: Int) {
                 when(position){

@@ -1,4 +1,4 @@
-package com.example.horus.presentation.adapter
+package com.example.horus.presentation.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +24,7 @@ class InstructionMuseumsAdapter :RecyclerView.Adapter<InstructionMuseumsAdapter.
         return ViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder:ViewHolder, position: Int) =holder.bind(data[position])
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) =holder.bind(data[position])
 
     override fun getItemCount() =data.size
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

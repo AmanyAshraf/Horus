@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 
 import android.os.Bundle

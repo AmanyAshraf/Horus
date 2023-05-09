@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.MuseumData
 import com.example.horus.databinding.FragmentMuseumsBinding
-import com.example.horus.presentation.activity.EgyptainMuseumActivity
-import com.example.horus.presentation.adapter.MuseumAdapter
+import com.example.horus.presentation.ui.activity.EgyptainMuseumActivity
+import com.example.horus.presentation.ui.adapter.MuseumAdapter
 
 
 class MuseumsFragment : Fragment() {
@@ -25,7 +25,7 @@ class MuseumsFragment : Fragment() {
             MuseumData(R.drawable.eg_museums,"Egyptian Museum"),
             MuseumData(R.drawable.eg_museums,"cairo Museum")
         )
-        val adapterMuseum =MuseumAdapter()
+        val adapterMuseum = MuseumAdapter()
         binding.rvMuseum.adapter =adapterMuseum
         adapterMuseum.data =museums
         val intent = Intent(this.requireContext(), EgyptainMuseumActivity::class.java)

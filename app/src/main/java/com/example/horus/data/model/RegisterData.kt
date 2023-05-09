@@ -1,4 +1,4 @@
-package com.example.horus.data.database
+package com.example.horus.data.model
 
 import com.google.gson.annotations.SerializedName
 

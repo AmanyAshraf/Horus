@@ -1,4 +1,4 @@
-package com.example.horus.presentation.adapter
+package com.example.horus.presentation.ui.adapter
 
 
 import android.view.LayoutInflater

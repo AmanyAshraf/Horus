@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.HospitalData
 import com.example.horus.databinding.FragmentHospitalBinding
-import com.example.horus.presentation.activity.CancerHosptalActivity
-import com.example.horus.presentation.adapter.HospitalAdapter
+import com.example.horus.presentation.ui.activity.CancerHosptalActivity
+import com.example.horus.presentation.ui.adapter.HospitalAdapter
 
 
 class HospitalFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.horus.presentation.activity
+package com.example.horus.presentation.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -81,7 +81,7 @@ class CreatePostImageFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == Activity.RESULT_OK){
             when(requestCode){
-                IMAGE_REQUEST_CODE_1->{
+                IMAGE_REQUEST_CODE_1 ->{
                     binding1.ivYourImage.load(data?.data){
                         crossfade(true)
                         crossfade(1000)

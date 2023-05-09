@@ -1,4 +1,4 @@
-package com.example.horus.presentation.adapter
+package com.example.horus.presentation.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -34,7 +34,7 @@ class AntiquesMuseumsAdapter : RecyclerView.Adapter<AntiquesMuseumsAdapter.ViewH
         return ViewHolder(itemView,mListener)
     }
 
-    override fun onBindViewHolder(holder:ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(data[position])
     }
 

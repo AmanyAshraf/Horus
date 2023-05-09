@@ -1,4 +1,4 @@
-package com.example.horus.presentation.adapter
+package com.example.horus.presentation.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -28,7 +28,7 @@ class HospitalAdapter :RecyclerView.Adapter<HospitalAdapter.ViewHolder>() {
             notifyDataSetChanged()
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HospitalAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.rv_hospital, parent, false)
         return ViewHolder(itemView, mListener)

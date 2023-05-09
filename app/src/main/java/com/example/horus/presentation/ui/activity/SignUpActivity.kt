@@ -1,4 +1,4 @@
-package com.example.horus.presentation.activity
+package com.example.horus.presentation.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.horus.R
 import com.example.horus.databinding.ActivitySignUpBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignUpActivity : AppCompatActivity() {
     var p = true
     override fun onCreate(savedInstanceState: Bundle?) {

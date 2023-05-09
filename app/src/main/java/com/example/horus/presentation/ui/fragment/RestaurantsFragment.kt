@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.navigation.findNavController
 import com.example.horus.R
 import com.example.horus.data.database.ResturantData
 import com.example.horus.databinding.FragmentRestaurantsBinding
-import com.example.horus.presentation.activity.OldHouseRestaurantActivity
-import com.example.horus.presentation.adapter.ResturantAdapter
+import com.example.horus.presentation.ui.activity.OldHouseRestaurantActivity
+import com.example.horus.presentation.ui.adapter.ResturantAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

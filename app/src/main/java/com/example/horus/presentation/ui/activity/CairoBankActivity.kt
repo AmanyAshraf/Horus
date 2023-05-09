@@ -1,4 +1,4 @@
-package com.example.horus.presentation.activity
+package com.example.horus.presentation.ui.activity
 
 import android.os.Bundle
 import android.widget.ImageView
@@ -7,8 +7,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.horus.R
 import com.example.horus.databinding.ActivityCairoBankBinding
-import com.example.horus.presentation.fragment.PlacesReviewFragment
-import com.example.horus.presentation.fragment.QFragment
+import com.example.horus.presentation.ui.fragment.PlacesReviewFragment
+import com.example.horus.presentation.ui.fragment.QFragment
 
 class CairoBankActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.example.horus.presentation.fragment
+package com.example.horus.presentation.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,7 @@ import com.example.horus.R
 import com.example.horus.data.database.BankData
 import androidx.appcompat.widget.SearchView
 import com.example.horus.databinding.FragmentSearchBinding
-import com.example.horus.presentation.adapter.SearchAdapter
+import com.example.horus.presentation.ui.adapter.SearchAdapter
 import java.util.*
 
 class SearchFragment : Fragment() {
