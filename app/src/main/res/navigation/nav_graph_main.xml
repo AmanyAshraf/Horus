@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/exploreFragment"
-        android:name="com.example.horus.presentation.fragment.ExploreFragment"
+        android:name="com.example.horus.presentation.ui.fragment.ExploreFragment"
         android:label="ExploreFragment"
         tools:layout="@layout/fragment_explore">
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/communityFragment"
-        android:name="com.example.horus.presentation.fragment.CommunityFragment"
+        android:name="com.example.horus.presentation.ui.fragment.CommunityFragment"
         android:label="CommunityFragment"
         tools:layout="@layout/fragment_community">
         <action
@@ -43,17 +43,17 @@
     </fragment>
     <fragment
         android:id="@+id/planFragment"
-        android:name="com.example.horus.presentation.fragment.PlanFragment"
+        android:name="com.example.horus.presentation.ui.fragment.PlanFragment"
         android:label="PlanFragment"
         tools:layout="@layout/fragment_plan"/>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.horus.presentation.fragment.SearchFragment"
+        android:name="com.example.horus.presentation.ui.fragment.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search"/>
     <fragment
         android:id="@+id/hotelFragment"
-        android:name="com.example.horus.presentation.fragment.HotelFragment"
+        android:name="com.example.horus.presentation.ui.fragment.HotelFragment"
         android:label="fragment_hotel"
         tools:layout="@layout/fragment_hotel" >
         <action
@@ -62,17 +62,17 @@
     </fragment>
     <fragment
         android:id="@+id/museumsFragment"
-        android:name="com.example.horus.presentation.fragment.MuseumsFragment"
+        android:name="com.example.horus.presentation.ui.fragment.MuseumsFragment"
         android:label="fragment_museums"
         tools:layout="@layout/fragment_museums" />
     <fragment
         android:id="@+id/restaurantsFragment"
-        android:name="com.example.horus.presentation.fragment.RestaurantsFragment"
+        android:name="com.example.horus.presentation.ui.fragment.RestaurantsFragment"
         android:label="fragment_restaurants"
         tools:layout="@layout/fragment_restaurants" />
     <fragment
         android:id="@+id/hospitalFragment"
-        android:name="com.example.horus.presentation.fragment.HospitalFragment"
+        android:name="com.example.horus.presentation.ui.fragment.HospitalFragment"
         android:label="fragment_hospital"
         tools:layout="@layout/fragment_hospital" >
         <action
@@ -81,32 +81,32 @@
     </fragment>
     <fragment
         android:id="@+id/banksFragment"
-        android:name="com.example.horus.presentation.fragment.BanksFragment"
+        android:name="com.example.horus.presentation.ui.fragment.BanksFragment"
         android:label="fragment_banks"
         tools:layout="@layout/fragment_banks" />
     <fragment
         android:id="@+id/cancerHospitalFragment"
-        android:name="com.example.horus.presentation.fragment.CancerHospitalFragment"
+        android:name="com.example.horus.presentation.ui.fragment.CancerHospitalFragment"
         android:label="fragment_cancer_hospital"
         tools:layout="@layout/fragment_cancer_hospital" />
     <fragment
         android:id="@+id/pyramidsFragment"
-        android:name="com.example.horus.presentation.fragment.PyramidsFragment"
+        android:name="com.example.horus.presentation.ui.fragment.PyramidsFragment"
         android:label="fragment_pyramids"
         tools:layout="@layout/fragment_pyramids" />
     <fragment
         android:id="@+id/placesReviewFragment"
-        android:name="com.example.horus.presentation.fragment.PlacesReviewFragment"
+        android:name="com.example.horus.presentation.ui.fragment.PlacesReviewFragment"
         android:label="fragment_places_review"
         tools:layout="@layout/fragment_places_review" />
     <fragment
         android:id="@+id/createPostFragment"
-        android:name="com.example.horus.presentation.fragment.CreatePostFragment"
+        android:name="com.example.horus.presentation.ui.fragment.CreatePostFragment"
         android:label="fragment_create_post"
         tools:layout="@layout/fragment_create_post" />
     <fragment
         android:id="@+id/createPostImageFragment"
-        android:name="com.example.horus.presentation.fragment.CreatePostImageFragment"
+        android:name="com.example.horus.presentation.ui.fragment.CreatePostImageFragment"
         android:label="fragment_create_post_image"
         tools:layout="@layout/fragment_create_post_image" />
 </navigation>
