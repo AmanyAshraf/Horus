@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.ui.activity.ProfileActivity">
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_profile_arrow_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_arrow"
+                    android:layout_marginTop="61dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineHeight="24sp"
+                    android:text="Profile"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginStart="120dp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_arrow_back"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/setting"
+                    android:layout_marginTop="58dp"
+                    android:layout_marginStart="100dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_profile"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile_image"
+                    android:layout_marginTop="54dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_arrow_back" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Mohamed Elnagar"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    android:layout_marginTop="61dp"
+                    android:layout_marginStart="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_image"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profile" />
+
+                <TextView
+                    android:id="@+id/tv_nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="(Eren_Yeager11)"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_image"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tv_joined_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Joined in 2023"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_profile_image"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nick_name" />
+
+                <TextView
+                    android:id="@+id/tv_profile_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="132dp"
+                    android:text="Share a little about yourself so other travelers"
+                    android:textColor="#666666"
+                    android:layout_marginStart="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_image" />
+                <TextView
+                    android:id="@+id/tv_profile_information_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="can get to know you!"
+                    android:textColor="#666666"
+                    android:layout_marginStart="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profile_information" />
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/s_loc"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_profile_information_2" />
+
+                <TextView
+                    android:id="@+id/tv_city_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No city selected."
+                    android:textSize="12dp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_location"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profile_information_2" />
+                <View
+                    android:id="@+id/v_line1"
+                    android:layout_width="340dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#E6E6E6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_city_location"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_Review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Reviews"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_line1" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="You have no reviews yet."
+                    android:textColor="#000000"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Review" />
+                <View
+                    android:id="@+id/v_line2"
+                    android:layout_width="340dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#E6E6E6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_Post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="0 Posts"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_line2" />
+
+                <TextView
+                    android:id="@+id/tv_description_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginBottom="107dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="You have no Posts yet"
+                    android:textColor="#000000"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Post" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

@@ -20,6 +20,8 @@ import com.example.horus.databinding.FragmentExploreBinding
 import com.example.horus.presentation.ui.activity.EventActivity
 import com.example.horus.presentation.ui.adapter.PlansExploreAdapter
 import com.example.horus.presentation.ui.adapter.TopPlacesExploreAdapter
+import com.example.horus.presentation.ui.activity.ProfileActivity
+
 
 
 class ExploreFragment : Fragment() {
@@ -88,6 +90,10 @@ class ExploreFragment : Fragment() {
             val intent = Intent(activity, EventActivity::class.java)
             activity?.startActivity(intent)
         })
+        binding.imAvatarProfileExplore.setOnClickListener {
+            val intent=Intent(activity, ProfileActivity::class.java)
+            activity?.startActivity(intent)
+        }
         return binding.root
     }
 
