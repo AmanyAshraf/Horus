@@ -13,7 +13,7 @@ import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
-class RegisterViewModel@Inject constructor(
+class RegisterViewModel @Inject constructor(
     private val dataRepository: DataRepository
 ) : ViewModel() {
 

@@ -22,10 +22,10 @@
         android:theme="@style/Theme.Horus"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
             android:name=".presentation.ui.activity.EventActivity"
-=======
-            android:name=".presentation.activity.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.ui.activity.SettingActivity"
@@ -34,20 +34,7 @@
             android:name=".presentation.ui.activity.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.activity.EventActivity"
->>>>>>> 423338ef3b04f572b413096df60bb4522579da53
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-<<<<<<< HEAD
-
             android:name=".presentation.ui.activity.AntiquesActivity"
-=======
-            android:name=".presentation.activity.AntiquesActivity"
->>>>>>> 423338ef3b04f572b413096df60bb4522579da53
             android:exported="false" />
         <activity
             android:name=".presentation.ui.activity.EgyptainMuseumActivity"
@@ -64,9 +51,7 @@
         <activity
             android:name=".presentation.ui.activity.DoubleTreeHotalActivity"
             android:exported="false" />
-        <activity
-            android:name=".presentation.ui.activity.PersonInformationActivity"
-            android:exported="false" />
+
         <activity
             android:name=".presentation.ui.activity.LocationActivity"
             android:exported="false" />
@@ -87,19 +72,15 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".presentation.ui.activity.SplashActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <activity
+                android:name=".presentation.ui.activity.SplashActivity"
+                android:exported="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
     </application>
 
 </manifest>
