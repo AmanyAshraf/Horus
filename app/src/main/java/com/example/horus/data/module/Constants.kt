@@ -1,3 +1,3 @@
 package com.example.horus.data.module
 
-const val BASE_URL= "e140-197-61-165-29.ngrok-free.app/"
+const val BASE_URL= "0338-197-61-78-235.ngrok-free.app"

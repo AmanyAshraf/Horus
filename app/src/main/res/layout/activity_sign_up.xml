@@ -10,7 +10,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <ProgressBar
+            android:id="@+id/progressBarSignup"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/iv_back_arrow"
@@ -33,7 +41,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="53dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/poppins_medium"
             android:lineHeight="30sp"
             android:shadowColor="@color/black"
@@ -42,12 +50,48 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_back_arrow" />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/tv_create_your_account"
             android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:paddingEnd="18dp"
+            android:drawableStart="@drawable/edit_text_profile_icon_login"
+            android:drawablePadding="18dp"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Name"
+            android:paddingStart="18dp"
+            android:layout_marginEnd="32dp"
+            android:id="@+id/et_name"
+            android:background="@drawable/edit_text_login" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/et_name"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:paddingEnd="18dp"
+            android:drawableStart="@drawable/edit_text_profile_icon_login"
+            android:drawablePadding="18dp"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="User name"
+            android:paddingStart="18dp"
+            android:layout_marginEnd="32dp"
+            android:id="@+id/et_userName"
+            android:background="@drawable/edit_text_login" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/et_userName"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="32dp"
@@ -81,6 +125,24 @@
             android:layout_marginEnd="32dp"
             android:id="@+id/et_password"
             android:background="@drawable/edit_text_login"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/et_password"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:paddingEnd="44dp"
+            android:hint="Confirm Password"
+            android:drawableStart="@drawable/edit_text_unlock_icon_login"
+            android:drawablePadding="18dp"
+            android:paddingStart="18dp"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPassword"
+            android:layout_marginEnd="32dp"
+            android:id="@+id/et_ConfirmPassword"
+            android:background="@drawable/edit_text_login"/>
 
 
         <ImageView
@@ -90,18 +152,29 @@
             android:layout_marginBottom="18dp"
             android:layout_marginEnd="17dp"
             android:layout_marginTop="17dp"
-
             android:clickable="true"
             android:src="@drawable/show_password_logo"
             app:layout_constraintBottom_toBottomOf="@+id/et_password"
             app:layout_constraintEnd_toEndOf="@+id/et_password"
             app:layout_constraintTop_toTopOf="@+id/et_password" />
+        <ImageView
+            android:id="@+id/iv_confirm_password_image_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginTop="17dp"
+            android:clickable="true"
+            android:src="@drawable/show_password_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/et_ConfirmPassword"
+            app:layout_constraintEnd_toEndOf="@+id/et_ConfirmPassword"
+            app:layout_constraintTop_toTopOf="@+id/et_ConfirmPassword" />
 
         <TextView
             android:id="@+id/tv_password_information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/et_password"
+            android:layout_below="@+id/et_ConfirmPassword"
             android:layout_marginStart="52dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="32dp"
@@ -112,7 +185,7 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+            app:layout_constraintTop_toBottomOf="@+id/et_ConfirmPassword" />
 
         <ImageView
             android:id="@+id/iv_mark_exclamation"
@@ -123,7 +196,7 @@
             android:layout_marginTop="6dp"
             android:src="@drawable/mark_exclamation"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+            app:layout_constraintTop_toBottomOf="@+id/et_ConfirmPassword" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_sign_up"

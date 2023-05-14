@@ -30,7 +30,7 @@ class LocationActivity : AppCompatActivity() {
                 ok = false
                 already_taken_location =false
             } else {
-                val intent = Intent(this, PersonInformationActivity::class.java)
+                val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
                 ok = true
@@ -38,7 +38,7 @@ class LocationActivity : AppCompatActivity() {
             }
         })
         findViewById<TextView>(R.id.tv_not_now).setOnClickListener {
-            val intent = Intent(this, PersonInformationActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }

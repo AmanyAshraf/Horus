@@ -1,4 +1,3 @@
 package com.example.horus.data.model
 
-class LoginBody {
-}
+data class LoginBody (val email:String,val password:String)
