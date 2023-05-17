@@ -6,16 +6,24 @@ import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.example.horus.R
 import com.example.horus.databinding.ActivitySignUpBinding
+import com.example.horus.presentation.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SignUpActivity : AppCompatActivity() {
     var p = true
+    private val viewModel: RegisterViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivitySignUpBinding>(
@@ -25,24 +33,57 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.btnSignUp.setOnClickListener(View.OnClickListener
         {
-            if (binding.etEmailAddress.text.toString()
-                    .isEmpty() && binding.etPassword.text.toString().isEmpty()
-            ) {
+            val userName = binding.etUserName.text.toString()
+            val email = binding.etEmailAddress.text.toString()
+            val password = binding.etPassword.text.toString()
+            val confirmPassword = binding.etConfirmPassword.text.toString()
+            val name = binding.etName.text.toString()
+            if (binding.etEmailAddress.text.toString().isEmpty() && binding.etPassword.text.toString().isEmpty()&&
+                binding.etName.text.toString().isEmpty()&&binding.etUserName.text.toString().isEmpty()&&
+                binding.etConfirmPassword.text.toString().isEmpty()) {
                 binding.etEmailAddress.error = "Require !"
                 binding.etPassword.error = "Require !"
-
-            } else if (binding.etEmailAddress.text.toString()
-                    .isEmpty()
-            ) binding.etEmailAddress.error = "Require!"
+                binding.etName.error = "Require!"
+                binding.etUserName.error = "Require!"
+                binding.etConfirmPassword.error = "Require!"
+            }
+            else if (binding.etName.text.toString().isEmpty()) binding.etName.error = "Require!"
+            else if (binding.etUserName.text.toString().isEmpty()) binding.etUserName.error = "Require!"
+            else if (binding.etEmailAddress.text.toString().isEmpty()) binding.etEmailAddress.error = "Require!"
             else if (binding.etPassword.text.toString().isEmpty()) binding.etPassword.error = "Require!"
+            else if (binding.etConfirmPassword.text.toString().isEmpty()) binding.etConfirmPassword.error = "Require!"
             else {
-                if (already_taken_location) {
-                    val intent = Intent(this, PersonInformationActivity::class.java)
-                    startActivity(intent)
-                }
-                else {
-                    val intent = Intent(this, LocationActivity::class.java)
-                    startActivity(intent)
+
+                // Show Progress Bar
+                binding.progressBarSignup.visibility = View.VISIBLE
+                // Disable user interactions
+                this.getWindow().setFlags(
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                val register = viewModel.register(name,userName, email, password,confirmPassword)
+                register.observe(this) {
+                    if (it==2) {
+                        Toast.makeText(this, "Already Registered", Toast.LENGTH_SHORT).show()
+                        binding.progressBarSignup.visibility = View.INVISIBLE
+                        this.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    }
+                    else if (it==1){
+                        binding.progressBarSignup.visibility = View.INVISIBLE
+                        this.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        if (already_taken_location) {
+                            val intent = Intent(this, LoginActivity::class.java)
+                            startActivity(intent)
+                        }
+                        else {
+                            val intent = Intent(this, LocationActivity::class.java)
+                            startActivity(intent)
+                        }
+                    } else {
+                        Toast.makeText(this, "Connection Error", Toast.LENGTH_SHORT)
+                            .show()
+                        binding.progressBarSignup.visibility = View.INVISIBLE
+                        this.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    }
                 }
             }
 

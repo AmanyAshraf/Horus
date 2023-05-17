@@ -1,5 +1,6 @@
 package com.example.horus.data.module
 
+import com.example.horus.data.interceptor.HeaderInterceptor
 import com.example.horus.data.network.ApiService
 import dagger.Module
 import dagger.Provides
@@ -27,6 +28,7 @@ object NetworkModule {
         loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient = OkHttpClient.Builder()
         .addInterceptor(loggingInterceptor)
+        .addInterceptor(HeaderInterceptor())
         .build()
 
     @Provides
