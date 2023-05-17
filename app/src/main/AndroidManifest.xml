@@ -22,10 +22,25 @@
         android:theme="@style/Theme.Horus"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
+            android:name=".presentation.ui.activity.PreferencesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.AddNumberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.ContactInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.NameInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.AccountInformationActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.ui.activity.EventActivity"
-=======
-            android:name=".presentation.activity.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.ui.activity.SettingActivity"
@@ -33,21 +48,13 @@
         <activity
             android:name=".presentation.ui.activity.ProfileActivity"
             android:exported="false" />
-        <activity
-            android:name=".presentation.activity.EventActivity"
->>>>>>> 423338ef3b04f572b413096df60bb4522579da53
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-<<<<<<< HEAD
 
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+
+        <activity
             android:name=".presentation.ui.activity.AntiquesActivity"
-=======
-            android:name=".presentation.activity.AntiquesActivity"
->>>>>>> 423338ef3b04f572b413096df60bb4522579da53
             android:exported="false" />
         <activity
             android:name=".presentation.ui.activity.EgyptainMuseumActivity"
