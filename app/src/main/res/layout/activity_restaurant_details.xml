@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".presentation.ui.activity.OldHouseRestaurantActivity">
+    tools:context=".presentation.ui.activity.RestaurantDetailsActivity">
     <data>
 
     </data>
@@ -32,14 +32,14 @@
                     android:id="@+id/tv_double_resturant"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="85dp"
                     android:layout_marginTop="56dp"
                     android:fontFamily="@font/poppins_medium"
                     android:lineHeight="24sp"
-                    android:text="Old House Restaurant"
+                    android:text="Restaurant"
                     android:textColor="#333333"
                     android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@id/iv_back_arrow_restaurant"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
@@ -53,52 +53,13 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/iv_restr"
+                    android:id="@+id/iv_restrauntImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="36dp"
-                    android:src="@drawable/restrant"
+                    tools:src="@drawable/restrant"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/tv_double_resturant" />
-
-                <ImageView
-                    android:id="@+id/iv_location_out_line"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="27dp"
-                    android:layout_marginTop="36dp"
-                    android:src="@drawable/location_out_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_restr"
-
-                    />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="3dp"
-                    android:layout_marginBottom="5dp"
-                    android:src="@drawable/eclipse_location"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_location_out_line"
-                    app:layout_constraintEnd_toEndOf="@+id/iv_location_out_line"
-                    app:layout_constraintStart_toStartOf="@+id/iv_location_out_line"
-                    app:layout_constraintTop_toTopOf="@+id/iv_location_out_line" />
-
-                <TextView
-                    android:id="@+id/tv_alexandria"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="11dp"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:lineHeight="21sp"
-                    android:text="@string/alexandria"
-                    android:textColor="#666666"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toEndOf="@+id/iv_location_out_line"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_restr" />
 
                 <TextView
                     android:id="@+id/tv_resturant_name"
@@ -108,11 +69,11 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins_medium"
                     android:lineHeight="48sp"
-                    android:text="Old House\nCosmopolitan"
+                    tools:text="Old House\nCosmopolitan"
                     android:textColor="#333333"
                     android:textSize="32sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_alexandria" />
+                    app:layout_constraintTop_toBottomOf="@id/iv_restrauntImg" />
 
                 <ImageView
                     android:id="@+id/iv_star_fill_1"
@@ -172,25 +133,14 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/poppins_medium"
                     android:lineHeight="24sp"
-                    android:text="144 reviews"
+                    tools:text="144 reviews"
                     android:textColor="#666666"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/iv_star_empty"
                     app:layout_constraintTop_toBottomOf="@+id/tv_resturant_name" />
 
                 <TextView
-                    android:id="@+id/tv_rate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="#1 of 511 Restaurants in Alexandria"
-                    android:textColor="#666666"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="24dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_review" />
-                <TextView
-                    android:id="@+id/tv_visit_museum_site"
+                    android:id="@+id/tv_visit_site"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
@@ -201,44 +151,47 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="26dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_rate" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_review" />
                 <TextView
-                    android:id="@+id/tv_closed_now"
+                    android:id="@+id/tv_telephone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
                     android:lineHeight="24sp"
-                    android:text="Closed now"
+                    android:text="@string/call"
                     android:textColor="#333333"
-                    android:textSize="14sp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginLeft="24dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_visit_museum_site" />
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="26dp"
+                    app:layout_constraintStart_toEndOf="@id/tv_visit_site"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_review" />
 
+                <TextView
+                    android:id="@+id/tv_opensFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineHeight="21sp"
+                    tools:text="Opens 11:00 AM "
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_visit_site"/>
                 <TextView
                     android:id="@+id/tv_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
                     android:lineHeight="21sp"
-                    android:text="Opens 11:00 AM - 11:00 PM"
+                    tools:text="to 11:00 pm"
                     android:textColor="#666666"
                     android:textSize="14sp"
                     android:layout_marginTop="4dp"
                     android:layout_marginLeft="24dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_closed_now"/>
-                <ImageView
-                    android:id="@+id/iv_left_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/left_arrow"
-                    android:layout_marginTop="88dp"
-                    android:layout_marginLeft="320dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_rate"
-                    />
+                    app:layout_constraintStart_toEndOf="@id/tv_opensFrom"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_visit_site"/>
                 <View
                     android:id="@+id/v_line1"
                     android:layout_width="wrap_content"
@@ -266,11 +219,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/v_line1" />
                 <TextView
                     android:id="@+id/tv_information"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
                     android:lineHeight="21sp"
-                    android:text="Set in the vibrant AI Barsha area - Dubai`s word-class shopping, entertainment and dining hun, the contemporary Double Tree by"
+                    tools:text="Set in the vibrant AI Barsha area - Dubai`s word-class shopping, entertainment and dining hun, the contemporary Double Tree by"
                     android:textColor="#666666"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
@@ -278,30 +231,8 @@
                     android:layout_marginEnd="24dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_about" />
-                <TextView
-                    android:id="@+id/tv_Read_more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:lineHeight="21sp"
-                    android:text="@string/Read_more"
-                    android:textColor="#333333"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="24dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_information" />
-                <ImageView
-                    android:id="@+id/iv_under_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/under_arrow"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginLeft="109dp"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_information"
-                    app:layout_constraintStart_toStartOf="parent"/>
                 <View
-                    android:id="@+id/v_line4"
+                    android:id="@+id/v_line3"
                     android:layout_width="wrap_content"
                     android:layout_height="1dp"
                     android:layout_marginTop="32dp"
@@ -310,7 +241,47 @@
                     android:background="#E6E6E6"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_Read_more"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_information"
+                    />
+                <TextView
+                    android:id="@+id/tv_Location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineHeight="36sp"
+                    android:text="Address"
+                    android:textColor="#333333"
+                    android:textSize="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_line3" />
+                <TextView
+                    android:id="@+id/tv_loc_res"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineHeight="21sp"
+                    tools:text="Set in the vibrant AI Barsha area - Dubai`s word-class shopping, entertainment and dining hun, the contemporary Double Tree by"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Location" />
+
+                <View
+                    android:id="@+id/v_line4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#E6E6E6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_loc_res"
                     />
                 <TextView
                     android:id="@+id/tv_Reviews"

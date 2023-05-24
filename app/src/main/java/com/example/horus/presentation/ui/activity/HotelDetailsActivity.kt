@@ -1,20 +1,22 @@
 package com.example.horus.presentation.ui.activity
 
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.horus.R
-import com.example.horus.databinding.ActivityDoubleTreeHotalBinding
+import com.example.horus.databinding.ActivityHotelDetailsBinding
 import com.example.horus.presentation.ui.fragment.PlacesReviewFragment
 import com.example.horus.presentation.ui.fragment.QFragment
 
-class DoubleTreeHotalActivity : AppCompatActivity() {
+class HotelDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding =
-            DataBindingUtil.setContentView<ActivityDoubleTreeHotalBinding>(this, R.layout.activity_double_tree_hotal)
+            DataBindingUtil.setContentView<ActivityHotelDetailsBinding>(this, R.layout.activity_hotel_details)
         setContentView(binding.root)
         binding.tvReviews.setOnClickListener {
 
@@ -24,6 +26,21 @@ class DoubleTreeHotalActivity : AppCompatActivity() {
        binding.tvQA.setOnClickListener {
            replaceFragment(QFragment())
         }
+        var desc = intent.getStringExtra("desc")
+        var id = intent.getIntExtra("id",0)
+        var loc = intent.getStringExtra("loc")
+        var name = intent.getStringExtra("name")
+        var review = intent.getIntExtra("review",0)
+        var lang = intent.getStringExtra("lang")
+        var img = intent.getStringExtra("img")
+        binding.tvHotelName.text=name
+        binding.tvInformation.text=desc
+        binding.tvReview.text=review.toString()
+        binding.HotelLocation.text=loc
+        binding.langaugeSpoken.text=lang
+        Glide.with(this)
+            .load(img)
+            .into(binding.ivHotelView)
 
     }
 

@@ -6,46 +6,47 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.example.horus.R
-import com.example.horus.data.database.ResturantData
+import com.example.horus.data.model.BankBody
+import com.example.horus.data.model.RestaurantBody
 import com.example.horus.databinding.FragmentRestaurantsBinding
-import com.example.horus.presentation.ui.activity.OldHouseRestaurantActivity
-import com.example.horus.presentation.ui.adapter.ResturantAdapter
+import com.example.horus.presentation.ui.activity.RestaurantDetailsActivity
+import com.example.horus.presentation.ui.adapter.RestaurantAdapter
+import com.example.horus.presentation.viewmodel.RestaurantViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [RestaurantsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+@AndroidEntryPoint
 class RestaurantsFragment : Fragment() {
  private lateinit var binding:FragmentRestaurantsBinding
+    private val viewModel: RestaurantViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentRestaurantsBinding.inflate(inflater,container,false)
-        val Restaurants = mutableListOf<ResturantData>(
-            ResturantData(R.drawable.restrant,"Old House Restaurant"),
-            ResturantData(R.drawable.restrant,"Kfc")
-        )
-        val adapterResturant = ResturantAdapter()
-        binding.rvRestaurant.adapter =adapterResturant
-        adapterResturant.data=Restaurants
-        val intent = Intent(this.requireContext(), OldHouseRestaurantActivity::class.java)
-        adapterResturant.setOnItemClickListener(object : ResturantAdapter.onItemClickListener{
+        val items = mutableListOf<RestaurantBody>()
+        /* val Restaurants = mutableListOf<ResturantData>(
+             ResturantData(R.drawable.restrant,"Old House Restaurant"),
+             ResturantData(R.drawable.restrant,"Kfc")
+         )*/
+        val adapterRestaurant = RestaurantAdapter(items.toList())
+        binding.rvRestaurant.adapter =adapterRestaurant
+      //  adapterRestaurant.data=Restaurants
+       // val intent = Intent(this.requireContext(), RestaurantDetailsActivity::class.java)
+        viewModel.response.observe(viewLifecycleOwner) {
+            adapterRestaurant.data= it
+            adapterRestaurant.notifyDataSetChanged()
+        }
+        /*adapterRestaurant.setOnItemClickListener(object : ResturantAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 when(position){
                     0-> startActivity(intent)
                 }
             }
-        })
+        })*/
         binding.ivBackArrowExplore.setOnClickListener {
             view?.findNavController()?.navigate(R.id.exploreFragment)
         }

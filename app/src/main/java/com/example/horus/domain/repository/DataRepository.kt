@@ -1,5 +1,6 @@
 package com.example.horus.domain.repository
 
+import com.example.horus.data.model.LocationBody
 import com.example.horus.data.model.LoginBody
 import com.example.horus.data.model.LoginData
 import com.example.horus.data.model.RegisterData
@@ -20,5 +21,14 @@ class DataRepository @Inject constructor(
     suspend fun login(email :String, password:String)
             = withContext(Dispatchers.IO) {
         api.login(LoginBody(email , password) )
+    }
+    suspend fun getHotelByCity() = withContext(Dispatchers.IO) {
+        api.getHotelByCity("mansoura")
+    }
+    suspend fun getBankByCity() = withContext(Dispatchers.IO) {
+        api.getBankByCity("mansoura")
+    }
+    suspend fun getRestaurantByCity() = withContext(Dispatchers.IO) {
+        api.getRestaurantByCity("mansoura")
     }
 }
