@@ -50,7 +50,7 @@
             android:drawablePadding="18dp"
             android:inputType="textEmailAddress"
             android:fontFamily="@font/poppins_regular"
-            android:hint="Email Address"
+            android:hint="Username"
             android:paddingStart="18dp"
             android:layout_marginEnd="32dp"
             android:id="@+id/ed_email_login"

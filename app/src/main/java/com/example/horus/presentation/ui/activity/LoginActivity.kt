@@ -21,12 +21,8 @@ class LoginActivity : AppCompatActivity() {
     var b1=true
     private val viewModel: SignInViewModel by viewModels()
     companion object {
-        var userId: Int? = 0
-        var userName: String? = null
-        var login_email: String? = null
         var token: String? = null
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding =
@@ -61,18 +57,15 @@ class LoginActivity : AppCompatActivity() {
                         WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                 val login = viewModel.login(email, password)
                 login.observe(this) {
-                    if (it?.userId==-1) {
+                    if (it?.access?.isEmpty() == true){
                         binding.progressBarLogin.visibility = View.INVISIBLE
                         this.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                         Toast.makeText(this, "There is Error", Toast.LENGTH_SHORT).show()
                     }
-                    else {
-                        userId=login.value?.userId
-                        userName = login.value?.name
-                        login_email = login.value?.email
+                    else{
                         binding.progressBarLogin.visibility = View.INVISIBLE
                         this.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                        val intent = Intent(this,MainActivity::class.java)
+                        val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                         finish()
                     }

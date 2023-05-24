@@ -1,3 +1,11 @@
 package com.example.horus.data.model
 
-data class LoginData (val userId :Int,val name:String,val email:String, val access_token:String)
+import com.google.gson.annotations.SerializedName
+
+
+data class LoginData (
+
+    @SerializedName("refresh" ) var refresh : String? = null,
+    @SerializedName("access"  ) var access  : String? = null
+
+)

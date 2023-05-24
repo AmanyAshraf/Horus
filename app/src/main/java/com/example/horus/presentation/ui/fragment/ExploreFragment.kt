@@ -35,10 +35,9 @@ class ExploreFragment : Fragment() {
 
         val services = mutableListOf<ServicesDataExplore>(
             ServicesDataExplore(R.drawable.hotel_explore,"Hotels"),
-            ServicesDataExplore(R.drawable.mesum_explore,"Museums"),
             ServicesDataExplore(R.drawable.resturant_explore,"Restaurants"),
-            ServicesDataExplore(R.drawable.hospital_explore,"Hospitals"),
-            ServicesDataExplore(R.drawable.bank_explore,"Banks")
+            ServicesDataExplore(R.drawable.bank_explore,"Banks"),
+            ServicesDataExplore(R.drawable.mesum_explore,"Museums")
         )
 
         val adapterServices = ServicesExploreAdapter()
@@ -46,13 +45,11 @@ class ExploreFragment : Fragment() {
         adapterServices.data = services
         adapterServices.setOnItemClickListener(object :ServicesExploreAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-
                 when(position){
                     0-> view?.findNavController()?.navigate(R.id.hotelFragment)
-                    1->view?.findNavController()?.navigate(R.id.museumsFragment)
-                    2->view?.findNavController()?.navigate(R.id.restaurantsFragment)
-                    3->view?.findNavController()?.navigate(R.id.hospitalFragment)
-                    4->view?.findNavController()?.navigate(R.id.banksFragment)
+                    1->view?.findNavController()?.navigate(R.id.restaurantsFragment)
+                    2->view?.findNavController()?.navigate(R.id.banksFragment)
+                    3->view?.findNavController()?.navigate(R.id.museumsFragment)
                 }
 
             }
