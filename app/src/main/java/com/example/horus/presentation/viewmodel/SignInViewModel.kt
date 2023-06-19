@@ -27,11 +27,11 @@ class SignInViewModel  @Inject constructor(
                 override fun onResponse(call: Call<LoginData>, response: Response<LoginData>) {
                     if (response.isSuccessful){
                         login.value=response.body()
-                        LoginActivity.token = response.body()?.access_token
+                        LoginActivity.token = response.body()?.access
                     }
                 }
                 override fun onFailure(call: Call<LoginData>, t: Throwable) {
-                    login.value = LoginData(-1,"","","")
+                    login.value = LoginData("","")
                 }
             })
         }

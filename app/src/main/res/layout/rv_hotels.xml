@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+        <variable
+            name="listItem"
+            type="com.example.horus.data.model.HotelBody" />
     </data>
     <androidx.cardview.widget.CardView
     android:layout_width="wrap_content"
@@ -12,7 +14,6 @@
     app:cardCornerRadius="5dp"
     android:layout_margin="2dp"
     android:clickable="true"
-
    >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,6 +28,7 @@
                 android:layout_margin="1dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginBottom="18dp"
+                app:img="@{listItem}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -42,6 +44,7 @@
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/black500"
+                android:text="@{listItem.name}"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+        <variable
+            name="listItem"
+            type="com.example.horus.data.model.RestaurantBody" />
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -26,6 +28,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginBottom="18dp"
+                app:img="@{listItem}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -40,13 +43,14 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="18dp"
                 android:fontFamily="@font/poppins_medium"
+                android:text="@{listItem.name}"
                 android:textColor="@color/black500"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/im_rv_resturant"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="resturant" />
+                tools:text="restaurant" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.activity.BankDetailsActivity">
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_back_arrow_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="61dp"
+                android:src="@drawable/back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_Cairo_Bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="24sp"
+                android:text="Bank"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/heart_white"
+                app:layout_constraintStart_toEndOf="@+id/tv_Cairo_Bank"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_bank_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                tools:src="@drawable/cairo_bank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_Cairo_Bank" />
+
+
+            <TextView
+                android:id="@+id/tv_bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Cairo Bank "
+                android:textColor="#333333"
+                android:textSize="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_bank_image" />
+
+            <TextView
+                android:id="@+id/tv_Visit_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="24sp"
+                android:text="@string/Visit_website"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bank_name" />
+            <TextView
+                android:id="@+id/tv_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="24sp"
+                android:text="@string/call"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="152dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bank_name" />
+
+            <View
+                android:id="@+id/v_line1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="#E6E6E6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Visit_website"
+                />
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="36sp"
+                android:text="About"
+                android:textColor="#333333"
+                android:textSize="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line1" />
+            <TextView
+                android:id="@+id/tv_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="21sp"
+                tools:text="Cairo Bank is an Egyptian bank headquartered in Cairo. The bank operates a network of branches and units spread all over the Arab Republic of Egypt."
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_about" />
+
+            <View
+                android:id="@+id/v_line2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="#E6E6E6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_information"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_the_area_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="36sp"
+                android:text="The area"
+                android:textColor="#333333"
+                android:layout_marginStart="24dp"
+                android:textSize="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_information" />
+            <TextView
+                android:id="@+id/tv_adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adress"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="21sp"
+                android:textColor="#333333"
+                android:lineHeight="36sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_the_area_1" />
+            <TextView
+                android:id="@+id/tv_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/inform"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:lineHeight="36sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_adress" />
+
+            <View
+                android:id="@+id/v_line4"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="#E6E6E6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_loc"
+                />
+            <TextView
+                android:id="@+id/tv_Reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Reviews"
+                android:clickable="true"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="36sp"
+                android:layout_marginTop="34dp"
+                android:layout_marginLeft="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line4"
+                />
+            <TextView
+                android:id="@+id/tv_Q__A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Q_A"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="36sp"
+                android:layout_marginTop="34dp"
+                android:layout_marginLeft="166dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line4"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mainlayout"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf= "@id/tv_Reviews" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+  </layout>

@@ -24,11 +24,13 @@ import dagger.hilt.android.AndroidEntryPoint
 public class SignUpActivity : AppCompatActivity() {
     var p = true
     companion object {
-        lateinit var userName :String
-        lateinit var email : String
-        lateinit var password : String
-        lateinit var confirmPassword : String
-        lateinit var name: String
+
+       lateinit var userName :String
+       lateinit var email : String
+       lateinit var password : String
+       lateinit var confirmPassword : String
+       lateinit var name: String
+
     }
     private val viewModel: RegisterViewModel by viewModels()
 

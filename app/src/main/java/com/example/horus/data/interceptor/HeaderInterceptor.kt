@@ -8,7 +8,7 @@ class HeaderInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
 
      val builder =   chain.request().newBuilder()
-         .addHeader("Authorization", "Bearer " + LoginActivity.token)
+         .addHeader("Authorization", "JWT " + LoginActivity.token)
          .build()
 
         return chain.proceed(builder)
