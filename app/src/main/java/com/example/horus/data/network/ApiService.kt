@@ -12,7 +12,7 @@ import retrofit2.http.POST
 interface ApiService {
 
     @POST("/users/register/")
-    fun register(@Body body: RegisterData) : Call<Unit>
+     fun register(@Body body: RegisterData) : Call<Unit>
     @POST("api/profiles")
     fun createProfile(@Body body: DataProfile):Call<Unit>
 

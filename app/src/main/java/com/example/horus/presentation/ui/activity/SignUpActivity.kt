@@ -21,9 +21,17 @@ import com.example.horus.presentation.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SignUpActivity : AppCompatActivity() {
+public class SignUpActivity : AppCompatActivity() {
     var p = true
+    companion object {
+        lateinit var userName :String
+        lateinit var email : String
+        lateinit var password : String
+        lateinit var confirmPassword : String
+        lateinit var name: String
+    }
     private val viewModel: RegisterViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivitySignUpBinding>(
@@ -33,11 +41,11 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.btnSignUp.setOnClickListener(View.OnClickListener
         {
-            val userName = binding.etUserName.text.toString()
-            val email = binding.etEmailAddress.text.toString()
-            val password = binding.etPassword.text.toString()
-            val confirmPassword = binding.etConfirmPassword.text.toString()
-            val name = binding.etName.text.toString()
+             userName = binding.etUserName.text.toString()
+             email = binding.etEmailAddress.text.toString()
+             password = binding.etPassword.text.toString()
+             confirmPassword = binding.etConfirmPassword.text.toString()
+             name = binding.etName.text.toString()
             if (binding.etEmailAddress.text.toString().isEmpty() && binding.etPassword.text.toString().isEmpty()&&
                 binding.etName.text.toString().isEmpty()&&binding.etUserName.text.toString().isEmpty()&&
                 binding.etConfirmPassword.text.toString().isEmpty()) {
