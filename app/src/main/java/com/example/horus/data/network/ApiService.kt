@@ -11,7 +11,9 @@ import retrofit2.http.Query
 interface ApiService {
 
     @POST("/users/register/")
+
     fun register(@Body body: RegisterData) : Call<Unit>
+
 
     @POST("/auth/jwt/create/")
     fun login(@Body body: LoginBody) : Call<LoginData>

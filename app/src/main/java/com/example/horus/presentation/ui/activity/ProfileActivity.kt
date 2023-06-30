@@ -6,6 +6,9 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.example.horus.R
 import com.example.horus.databinding.ActivityProfileBinding
+import com.example.horus.presentation.ui.activity.EditProfileActivity.Companion.about
+import com.example.horus.presentation.ui.activity.SignUpActivity.Companion.name
+import com.example.horus.presentation.ui.activity.SignUpActivity.Companion.userName
 
 class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +25,8 @@ class ProfileActivity : AppCompatActivity() {
             val intent=Intent(this, EditProfileActivity::class.java)
             startActivity(intent)
         }
+        binding.tvProfileInformation.text =about
+
 
     }
 }
