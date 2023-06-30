@@ -2,10 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".presentation.ui.activity.EditProfileActivity">
-    <data>
-
-    </data>
+    tools:context=".presentation.ui.activity.NameInfoActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +14,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
-                    android:id="@+id/iv_profile_arrow_back"
+                    android:id="@+id/iv_name_arrow_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/back_arrow"
@@ -25,57 +22,18 @@
                     android:layout_marginStart="32dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_Edit_profile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:lineHeight="24sp"
-                    android:text="Edit profile"
-                    android:textSize="16sp"
-                    android:textColor="#333333"
-                    android:layout_marginTop="56dp"
-                    android:layout_marginStart="120dp"
-                    app:layout_constraintStart_toEndOf="@+id/iv_profile_arrow_back"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/iv_profile_edit_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    android:src="@drawable/edit_profile_photo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_Edit_profile" />
-
-                <ImageView
-                    android:id="@+id/iv_change_photo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/camera"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginStart="72dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="12dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_edit_image"
-                    app:layout_constraintEnd_toEndOf="@+id/iv_profile_edit_image"
-                    app:layout_constraintStart_toStartOf="@+id/iv_profile_edit_image"
-                    app:layout_constraintTop_toTopOf="@+id/iv_profile_edit_image" />
-
                 <TextView
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Name"
+                    android:text="Frist name"
                     android:textColor="#333333"
                     android:textSize="14sp"
                     android:layout_marginTop="32dp"
                     android:layout_marginStart="32dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_edit_image" />
+                    app:layout_constraintTop_toBottomOf="@+id/iv_name_arrow_back" />
                 <EditText
                     android:id="@+id/ed_your_name"
                     android:layout_width="match_parent"
@@ -84,7 +42,7 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="32dp"
                     android:inputType="textPersonName"
-                    android:hint="@string/your_name"
+                    android:hint="Frist name"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:textSize="14sp"
@@ -96,7 +54,38 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_name" />
                 <TextView
-                    android:id="@+id/tv_Username"
+                    android:id="@+id/tv_last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Last name"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_your_name" />
+                <EditText
+                    android:id="@+id/ed_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:inputType="textPersonName"
+                    android:hint="Last name"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="14sp"
+                    android:lineHeight="21sp"
+                    android:textColor="@color/black500"
+                    android:fontFamily="@font/poppins_regular"
+                    android:background="@drawable/sign_up_edit_text_shape"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_last_name" />
+                <TextView
+                    android:id="@+id/tv_user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
@@ -106,7 +95,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginStart="32dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ed_your_name" />
+                    app:layout_constraintTop_toBottomOf="@+id/ed_last_name" />
                 <EditText
                     android:id="@+id/ed_Username"
                     android:layout_width="match_parent"
@@ -125,70 +114,7 @@
                     android:background="@drawable/sign_up_edit_text_shape"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_Username" />
-                <TextView
-                    android:id="@+id/tv_Country"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Country"
-                    android:textColor="#333333"
-                    android:textSize="14sp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginStart="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ed_Username" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/appCompatButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:background="@drawable/search_button"
-                    android:drawableEnd="@drawable/search_icon"
-                    android:drawablePadding="200dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:hint="Search"
-                    android:inputType="textEmailAddress"
-                    android:paddingStart="1dp"
-                    android:paddingEnd="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_Country" />
-                <TextView
-                    android:id="@+id/tv_About_you"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="About you"
-                    android:textColor="#333333"
-                    android:textSize="14sp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginStart="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
-                <EditText
-                    android:id="@+id/ed_some_detailes"
-                    android:layout_width="match_parent"
-                    android:layout_height="172dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:inputType="textPersonName"
-                    android:hint="Write some details about yourself"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:textSize="14sp"
-                    android:lineHeight="21sp"
-                    android:textColor="@color/black500"
-                    android:fontFamily="@font/poppins_regular"
-                    android:background="@drawable/sign_up_edit_text_shape"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_About_you" />
-
+                    app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_save"
                     android:layout_width="match_parent"
@@ -196,7 +122,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginStart="33dp"
-                    android:layout_marginTop="64dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="33dp"
                     android:layout_marginBottom="50dp"
                     android:background="@drawable/save_button"
@@ -210,11 +136,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ed_some_detailes"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
-
-
+                    app:layout_constraintTop_toBottomOf="@+id/ed_Username"
+                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
     </LinearLayout>
+
 </layout>
