@@ -3,9 +3,7 @@ package com.example.horus.presentation.ui.adapter
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
-import com.example.horus.data.model.BankBody
-import com.example.horus.data.model.HotelBody
-import com.example.horus.data.model.RestaurantBody
+import com.example.horus.data.model.*
 
 
 @BindingAdapter("img")
@@ -28,6 +26,24 @@ fun bindImgBank(imageView: ImageView, data: BankBody?) {
 }
 @BindingAdapter("img")
 fun bindImgRestaurant(imageView: ImageView, data: RestaurantBody?) {
+
+    data?.let {
+        Glide.with(imageView.context)
+            .load(it.image)
+            .into(imageView)
+    }
+}
+@BindingAdapter("img")
+fun bindImgSearch(imageView: ImageView, data: SearchBody) {
+
+    data?.let {
+        Glide.with(imageView.context)
+            .load(it.image)
+            .into(imageView)
+    }
+}
+@BindingAdapter("img")
+fun bindImgMuseum(imageView: ImageView, data: MuseumBody) {
 
     data?.let {
         Glide.with(imageView.context)

@@ -38,13 +38,13 @@
            app:cardCornerRadius="32dp"
            android:drawableEnd="@drawable/camera_ic"
            android:elevation="12dp">
-           <androidx.appcompat.widget.SearchView
+           <EditText
                android:id="@+id/searchView"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               app:queryHint="Where to?"
-               app:iconifiedByDefault="false"
-               app:queryBackground="@android:color/transparent"/>
+               android:hint="Where to?"
+               android:paddingStart="50dp"
+               android:background="@drawable/edit_text_search"/>
            <ImageView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -52,44 +52,29 @@
                android:src="@drawable/camera_ic"
                android:layout_gravity="end|center"
                android:layout_marginEnd="18dp"/>
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/searchButton"
+               android:src="@drawable/search_icon"
+               android:layout_gravity="start|center"
+               android:padding="10dp"
+               android:layout_marginStart="8dp"/>
 
        </com.google.android.material.card.MaterialCardView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/materialCardView"
-            android:id="@+id/nearby">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/nearby"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nearby"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="16sp"
-                android:textColor="@color/black500"
-                android:layout_marginStart="16dp"/>
 
-        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nearby"
+            app:layout_constraintTop_toBottomOf="@id/materialCardView"
             android:layout_marginTop="24dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:id="@+id/rv_places_search"
-            tools:listitem="@layout/rv_bank" />
+            tools:listitem="@layout/rv_search_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -66,9 +66,9 @@ class ExploreFragment : Fragment() {
         adapterPlans.data = plans
 
         val topPlaces = mutableListOf<TopPlacesDataExplore>(
-            TopPlacesDataExplore(R.drawable.top_places_explore,"Pyramids"),
-            TopPlacesDataExplore(R.drawable.top_places_explore,"Pyramids"),
-            TopPlacesDataExplore(R.drawable.top_places_explore,"Pyramids")
+            TopPlacesDataExplore(R.drawable.place,"Pyramids"),
+            TopPlacesDataExplore(R.drawable.place1,"Egyptian Museum"),
+            TopPlacesDataExplore(R.drawable.place2,"Luxor Museum")
 
         )
         val adapterTopPlaces = TopPlacesExploreAdapter()

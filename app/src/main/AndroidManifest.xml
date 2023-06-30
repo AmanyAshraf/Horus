@@ -22,6 +22,13 @@
         android:theme="@style/Theme.Horus"
         tools:targetApi="31">
         <activity
+            android:name=".SearchItemDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".presentation.ui.activity.EventActivity"
             android:exported="false" />
         <activity
@@ -51,7 +58,6 @@
         <activity
             android:name=".presentation.ui.activity.HotelDetailsActivity"
             android:exported="false" />
-
         <activity
             android:name=".presentation.ui.activity.LocationActivity"
             android:exported="false" />
@@ -72,15 +78,15 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-            <activity
-                android:name=".presentation.ui.activity.SplashActivity"
-                android:exported="true">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name=".presentation.ui.activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
-            </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

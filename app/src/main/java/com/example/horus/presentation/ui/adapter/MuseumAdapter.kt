@@ -1,53 +1,43 @@
 package com.example.horus.presentation.ui.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.horus.R
-import com.example.horus.data.database.MuseumData
+import com.example.horus.data.model.MuseumBody
+import com.example.horus.databinding.RvMuseumsBinding
+import com.example.horus.presentation.ui.activity.EgyptainMuseumActivity
+import com.example.horus.presentation.ui.activity.SearchItemDetailsActivity
 
-class MuseumAdapter : RecyclerView.Adapter<MuseumAdapter.ViewHolder>(){
-    private lateinit var mListener: onItemClickListener
+class MuseumAdapter (var data: List<MuseumBody>): RecyclerView.Adapter<MuseumAdapter.ViewHolder>(){
 
-    interface onItemClickListener {
-
-        fun onItemClick(position: Int)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MuseumAdapter.ViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val binding = RvMuseumsBinding.inflate(layoutInflater, parent, false)
+        return ViewHolder(binding)
     }
 
-    fun setOnItemClickListener(listener: onItemClickListener) {
-        mListener = listener
-    }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(data[position])
 
-    var data: MutableList<MuseumData> = mutableListOf()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.rv_museums,parent,false)
-        return ViewHolder(itemView,mListener)
-    }
+    override fun getItemCount() = data.size
 
-    override fun getItemCount() =data.size
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(data[position])
-    }
-    class ViewHolder (itemView: View, listener: onItemClickListener) :
-        RecyclerView.ViewHolder(itemView) {
-        fun bind(item: MuseumData) = with(itemView) {
-            findViewById<TextView>(R.id.tv_rv_museum).text = item.name
-            findViewById<ImageView>(R.id.im_rv_museum).setImageResource(item.img)
-
+    inner class  ViewHolder (private val binding: RvMuseumsBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: MuseumBody) = with(itemView) {
+            binding.listItem=item
         }
 
         init {
             itemView.setOnClickListener {
-                listener.onItemClick(adapterPosition)
+                val intent = Intent(itemView.context, EgyptainMuseumActivity::class.java)
+                intent.putExtra("id",data.get(adapterPosition).id)
+                intent.putExtra("name",data.get(adapterPosition).name)
+                intent.putExtra("desc",data.get(adapterPosition).description)
+                intent.putExtra("loc",data.get(adapterPosition).location)
+                intent.putExtra("img",data.get(adapterPosition).image)
+                intent.putExtra("website",data.get(adapterPosition).website)
+                intent.putExtra("review",data.get(adapterPosition).reviewRate)
+                itemView.context.startActivity(intent)
             }
 
         }
