@@ -5,7 +5,8 @@
     <data>
         <variable
             name="listItem"
-            type="com.example.horus.data.model.MuseumBody" />
+            type="com.example.horus.data.model.SearchBody" />
+
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -13,41 +14,44 @@
         android:elevation="4dp"
         app:cardCornerRadius="10dp"
         android:layout_margin="10dp"
-        android:clickable="true">
+        android:clickable="true"
+        >
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingStart="40dp"
             android:paddingEnd="40dp">
+
             <ImageView
+                android:id="@+id/im_rv_search"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                tools:src="@drawable/notification"
-                android:id="@+id/im_rv_museum"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
                 app:img="@{listItem}"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="18dp" />
+                tools:src="@drawable/notification" />
 
             <TextView
-                android:id="@+id/tv_rv_museum"
+                android:id="@+id/tv_rv_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/black500"
                 android:textSize="16sp"
-                android:layout_marginTop="18dp"
-                android:text="@{listItem.name}"
-                android:layout_marginStart="140dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="18dp"
+                android:layout_marginStart="40dp"
+                android:text="@{listItem.name}"
                 android:layout_marginEnd="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/im_rv_museum"
+                app:layout_constraintStart_toEndOf="@+id/im_rv_search"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="museum" />
+                tools:text="bank" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
-
 </layout>

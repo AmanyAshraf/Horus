@@ -13,8 +13,8 @@
         android:paddingEnd="24dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
             tools:src="@drawable/top_places_explore"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,22 +27,13 @@
             android:id="@+id/tv_rv_placeName_explore"
             tools:text="Pyramids"
             app:layout_constraintStart_toStartOf="@id/im_rv_topPlacesPhoto_explore"
-            app:layout_constraintBottom_toBottomOf="@id/im_rv_topPlacesPhoto_explore"
+            app:layout_constraintTop_toBottomOf="@id/im_rv_topPlacesPhoto_explore"
             android:fontFamily="@font/poppins_bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black500"
             android:textSize="24sp"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="12dp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/heart_white"
-            app:layout_constraintEnd_toEndOf="@id/im_rv_topPlacesPhoto_explore"
-            app:layout_constraintTop_toTopOf="@id/im_rv_topPlacesPhoto_explore"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp"
-            android:id="@+id/im_add_to_fav_explore" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,4 +35,10 @@ class DataRepository @Inject constructor(
         api.getRestaurantByCity("mansoura")
 
     }
+    suspend fun search(query : String) = withContext(Dispatchers.IO) {
+        api.search(query)
+    }
+    suspend fun getMuseums() = withContext(Dispatchers.IO) {
+        api.getMuseums("giza")
+    }
 }

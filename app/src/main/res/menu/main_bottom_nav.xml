@@ -6,15 +6,15 @@
         android:icon="@drawable/home_icon"
         android:title="Explore"/>
 
-    <item
+  <!--  <item
         android:id="@+id/communityFragment"
         android:icon="@drawable/community_icon"
-        android:title="Community"/>
+        android:title="Community"/>-->
 
-    <item
+   <!-- <item
         android:id="@+id/planFragment"
         android:icon="@drawable/plan_icon"
-        android:title="Plan"/>
+        android:title="Plan"/>-->
     <item
         android:id="@+id/searchFragment"
         android:icon="@drawable/search_icon"

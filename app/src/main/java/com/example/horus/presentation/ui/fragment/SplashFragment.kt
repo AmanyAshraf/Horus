@@ -61,6 +61,7 @@ class SplashFragment : Fragment() {
         binding.skipSplash.setOnClickListener(View.OnClickListener {
             view?.findNavController()
                 ?.navigate(R.id.action_splashFragment_to_loginActivity)
+           // startActivity(Intent(requireActivity(),MainActivity::class.java))
         })
         binding.btnGoogle.setOnClickListener(View.OnClickListener {
             Log.d(TAG, "onCreate : begin Google signIN")
